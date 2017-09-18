@@ -1,0 +1,65 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="Pushlish meida iot sdk."><title>Android MideaSDK局域网扫描详解 | Midea Smart Technology Co.,Ltd.</title><link rel="stylesheet" type="text/css" href="../../../../css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/7.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="../../../../favicon.ico"><link rel="apple-touch-icon" href="../../../../apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="../../../../apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">Android MideaSDK局域网扫描详解</h1><a id="logo" href="../../../../.">Midea Smart Technology Co.,Ltd.</a><p class="description">美的智慧家居科技有限公司.</p></div><div id="nav-menu"><a href="../../../../." class="current"><i class="fa fa-home"> 首页</i></a><a href="../../../../archives/"><i class="fa fa-archive"> 归档</i></a><a href="../../../../about/"><i class="fa fa-user"> 关于</i></a><a href="../../../../api/"><i class="fa fa-file-code-o"> API文档</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">Android MideaSDK局域网扫描详解</h1><div class="post-meta">Sep 13, 2017<span> | </span><span class="category"><a href="../../../../categories/文档/">文档</a></span></div><div class="post-content"><p><img src="/../../images/directory-235079_640.jpg" alt=""></p>
+<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><ul>
+<li>集成Midea SDK</li>
+</ul>
+<h3 id="模式说明"><a href="#模式说明" class="headerlink" title="模式说明"></a>模式说明</h3><p>SDK具备三种扫描模式：</p>
+<ol>
+<li>低频扫描模式，每个广播发送周期在40s以上。</li>
+<li>高频模式，每个广播发送周期为2s。</li>
+<li>关闭模式，SDK不发送广播。</li>
+</ol>
+<h3 id="关联接口"><a href="#关联接口" class="headerlink" title="关联接口"></a>关联接口</h3><ul>
+<li>void startScanLanDevice(int time, MSmartDataCallback<list<bundle>&gt; callback);<blockquote>
+<p>启动广播扫描，注意正常情况下广播是一直在低频率的进行局域网设备发现，这个接口主要根据time参数的不同含义不同：</p>
+</blockquote>
+</list<bundle></li>
+</ul>
+<ol>
+<li>time&gt;0   SDK执行高频扫描time指定的时间，扫描完成后，返回这段时间内所有发现的设备（去重）并且恢复到低频模式（如果没有其它高频任务），SDK会做缓存。</li>
+<li>time=0   SDK立即启动扫描，但是不会回调任何数据，也就是callback无效。</li>
+<li>time=-1  SDK一直保持高频扫描，直到再次调用这个接口且time不是-1，不会回调任何数据，callback无效。</li>
+<li>time=-2  SDK完全关闭广播扫描，直到再次调用这个接口且tiem不是-2，不会回调任何数据，callback无效。</li>
+</ol>
+<hr>
+<blockquote>
+<p><strong>注意:</strong> 启动配网或者添加局域网都会打破上述第4条规则，配网结束后，SDK会恢复低频模式。</p>
+</blockquote>
+<ul>
+<li>void registerDeviceScanListener(MSmartDeviceScanListener listener);<blockquote>
+<p>监听设备扫描结果。这个接口实时监听设备扫描结果，一点有设备发现立刻上报，SDK不做任何缓存处理。可以配合startScanLanDevice使用，快速发现UI需要的具体某个设备。</p>
+</blockquote>
+</li>
+<li>void removeDeviceScanListener(MSmartDeviceScanListener listener);<blockquote>
+<p>移除设备扫描结果监听。</p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p><strong>接口具体定义及参数定义请参照<a href="/../../api/android-api/">API文档</a> MSmartUserDeviceManager中的定义</strong></p>
+</blockquote>
+<h3 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h3><p>对于上层UI用户来讲，扫描局域网设备可能有三种可能性：</p>
+<ol>
+<li>返回一段时间内扫描的所有设备，例如：让SDK扫描20s后返回所有扫描到的设备列表。</li>
+<li>有设备发现立刻上报。</li>
+<li>完全停止扫描。</li>
+</ol>
+<h3 id="特殊场景"><a href="#特殊场景" class="headerlink" title="特殊场景"></a>特殊场景</h3><ol>
+<li>用户希望快速扫描并自己缓存设备列表：<blockquote>
+<p>用户自己做定时扫描，通过每次调用startScanLanDevice并将time参数设定为0，然后通过registerDeviceScanListener监听设备扫描上报，从而实现用户定制需求。也可以将time设定为-1，任务完成后再调用一次startScanLanDevice并将time参数设定为0。</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="广播影响"><a href="#广播影响" class="headerlink" title="广播影响"></a>广播影响</h3><p>目前设备的局域网上线需要依靠广播，如果关注局域网上线速度，就不能关不局域网广播。</p>
+<h3 id="SDK优化"><a href="#SDK优化" class="headerlink" title="SDK优化"></a>SDK优化</h3><p>目前AndroidSDK 已经做了一些优化包括：</p>
+<ol>
+<li>APP退到后台SDK会自动关闭广播。</li>
+<li>APP进入前台SDK会立即高频执行4s设备扫描，随后进入低频模式。</li>
+</ol>
+</div><div class="tags"><a href="../../../../tags/MideaSDK/">MideaSDK</a><a href="../../../../tags/SDK/">SDK</a><a href="../../../../tags/文档/">文档</a><a href="../../../../tags/局域网扫描/">局域网扫描</a><a href="../../../../tags/技术/">技术</a></div><div class="post-nav"><a href="../../18/ios-quick-menaul/" class="pre">ios-quick-menaul</a><a href="../iphone8-price/" class="next">iPhone 8全系价格曝光 最高“只要”9千元</a></div><div id="lv-container" data-id="city" data-uid="MTAyMC8zMDg0Mi83Mzkx"><script>(function(d, s) {
+   var j, e = d.getElementsByTagName(s)[0];
+   if (typeof LivereTower === 'function') { return; }
+   j = d.createElement(s);
+   j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+   j.async = true;
+   e.parentNode.insertBefore(j, e);
+})(document, 'script');</script></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form action="//www.baidu.com/baidu" method="get" accept-charset="utf-8" target="_blank" class="search-form"><input type="search" name="word" maxlength="20" placeholder="Search"/><input type="hidden" name="si" value=""/><input name="tn" type="hidden" value="bds"/><input name="cl" type="hidden" value="3"/><input name="ct" type="hidden" value="2097152"/><input name="s" type="hidden" value="on"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="../../../../categories/业界新闻/">业界新闻</a></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/文档/">文档</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="../../../../tags/说明文档/" style="font-size: 15px;">说明文档</a> <a href="../../../../tags/news/" style="font-size: 15px;">news</a> <a href="../../../../tags/iPhone8售价/" style="font-size: 15px;">iPhone8售价</a> <a href="../../../../tags/iPhone8价格/" style="font-size: 15px;">iPhone8价格</a> <a href="../../../../tags/Midea/" style="font-size: 15px;">Midea</a> <a href="../../../../tags/Midea-SDK/" style="font-size: 15px;">Midea SDK</a> <a href="../../../../tags/iPhone8/" style="font-size: 15px;">iPhone8</a> <a href="../../../../tags/MideaSDK/" style="font-size: 15px;">MideaSDK</a> <a href="../../../../tags/SDK/" style="font-size: 15px;">SDK</a> <a href="../../../../tags/文档/" style="font-size: 15px;">文档</a> <a href="../../../../tags/局域网扫描/" style="font-size: 15px;">局域网扫描</a> <a href="../../../../tags/技术/" style="font-size: 15px;">技术</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="../../18/mideasdk3.0更新日志/">mideasdk3.0更新日志</a></li><li class="post-list-item"><a class="post-list-link" href="../../18/ios-quick-menaul/">ios-quick-menaul</a></li><li class="post-list-item"><a class="post-list-link" href="">Android MideaSDK局域网扫描详解</a></li><li class="post-list-item"><a class="post-list-link" href="../iphone8-price/">iPhone 8全系价格曝光 最高“只要”9千元</a></li><li class="post-list-item"><a class="post-list-link" href="../midea-sdk-brief/">MideaSDK 简介</a></li><li class="post-list-item"><a class="post-list-link" href="../../12/quick-menual/">MideaSDK 3.0 快速集成说明</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="http://msmart.midea.com/" title="美的智慧家居科技有限公司" target="_blank">美的智慧家居科技有限公司</a><ul></ul><a href="http://iot.midea.com/" title="美的智慧家居科开放中心" target="_blank">美的智慧家居科开放中心</a><ul></ul><a href="http://www.midea.com/cn/about_midea/Group_profile/?mtag=40005.1.2" title="美的集团" target="_blank">美的集团</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2017 <a href="../../../../." rel="nofollow">Midea Smart Technology Co.,Ltd..</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a></div></div></div><a id="rocket" href="#top" class="show"></a><script type="text/javascript" src="../../../../js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/3.1.20/jquery.fancybox.min.js" async></script><script type="text/javascript" src="../../../../js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/3.1.20/jquery.fancybox.min.css"><script type="text/javascript" src="../../../../js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="../../../../js/smartresize.js?v=0.0.0"></script></div></body></html>

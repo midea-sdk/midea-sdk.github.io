@@ -1,0 +1,346 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="Pushlish meida iot sdk."><title>MideaSDK 3.0 快速集成说明 | Midea Smart Technology Co.,Ltd.</title><link rel="stylesheet" type="text/css" href="../../../../css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/7.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="../../../../favicon.ico"><link rel="apple-touch-icon" href="../../../../apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="../../../../apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">MideaSDK 3.0 快速集成说明</h1><a id="logo" href="../../../../.">Midea Smart Technology Co.,Ltd.</a><p class="description">美的智慧家居科技有限公司.</p></div><div id="nav-menu"><a href="../../../../." class="current"><i class="fa fa-home"> 首页</i></a><a href="../../../../archives/"><i class="fa fa-archive"> 归档</i></a><a href="../../../../about/"><i class="fa fa-user"> 关于</i></a><a href="../../../../api/"><i class="fa fa-file-code-o"> API文档</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">MideaSDK 3.0 快速集成说明</h1><div class="post-meta">Sep 12, 2017<span> | </span><span class="category"><a href="../../../../categories/文档/">文档</a></span></div><div class="post-content"><p><img src="http://msmart.midea.com/images/brand.png" alt="美的智慧家居科技有限公司"> </p>
+<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>Midea SDK是美的智慧家居系统控制端接入的一套Android系统开发工具包，第三方开发者可以使用这套工具包提供的接口接入到美的智慧家居系统中实现本地或者远程控制美的家电。<br>SDK适用的场景包括：手机、机电盒、智能电视、智能硬件设备等。</p>
+<h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><p>SDK主要提供的功能包括：   </p>
+<ol>
+<li>账号注册登陆。     </li>
+<li>设备配网和云端绑定。</li>
+<li>局域网设备扫描。</li>
+<li>设备控制命令本地/远程下发。    </li>
+<li>服务器业务请求封装。    </li>
+<li>设备协议可视化解析。    </li>
+</ol>
+<h2 id="业务介绍"><a href="#业务介绍" class="headerlink" title="业务介绍"></a>业务介绍</h2><p>SDK分为家庭业务模型和单用户业务模型。<br> 1.单用户模型：家电设备直接与用户进行绑定，单个设备在用户之间进行分享。<br> 2.家庭模型：家电和家庭进行关联，无法实现单个设备分享，用户通过加入家庭进行家庭中所有设备的全部共享。</p>
+<blockquote>
+<p>推荐使用单用户模型，因为数据模型耦合度低，扩展性好。但是如果需要和美居进行数据互通，则需要使用家庭租模型。</p>
+</blockquote>
+<h2 id="代码目录介绍"><a href="#代码目录介绍" class="headerlink" title="代码目录介绍"></a>代码目录介绍</h2><ul>
+<li>DemoFamily: 家庭组业务模型Demo。  </li>
+<li>DemoNormal: 单用户业务模型Demo。  </li>
+<li>MSmartSDK: SDK源代码。  </li>
+</ul>
+<h2 id="SDK使用前准备"><a href="#SDK使用前准备" class="headerlink" title="SDK使用前准备"></a>SDK使用前准备</h2><ol>
+<li>注册美的智慧家居开发者账号。</li>
+<li>可上网2.4G路由器一台。</li>
+<li>美的智能家电一台。</li>
+<li>MideaSDK开发包。</li>
+<li>申请AppID,AppKey,AppSrc三个参数。</li>
+<li>SDK提供的API文档。</li>
+<li>智能手机一台（Android 4.0及以上）。  </li>
+</ol>
+<blockquote>
+<p>目前美的智能家电仅支持2.4G网络。一般家电上有MSmart标识的家电为智能家电，如果不确定可以咨询售后进行确认。智能手机也可以是任何可连接网络的Android平台硬件终端。  </p>
+</blockquote>
+<p> <strong>登陆美的智慧家居开发者官网申请AppID,AppKey,AppSrc：</strong><a href="https://iot.midea.com/develop" target="_blank" rel="external">开发者官网</a></p>
+<h2 id="开发流程"><a href="#开发流程" class="headerlink" title="开发流程"></a>开发流程</h2><ol>
+<li>注册开发者。</li>
+<li>体检开发申请。   </li>
+<li>获取AppID等参数。</li>
+<li>下载SDK。</li>
+<li>集成配网SDK。  </li>
+<li>开发审核发布。</li>
+</ol>
+<h2 id="SDK配置"><a href="#SDK配置" class="headerlink" title="SDK配置"></a>SDK配置</h2><blockquote>
+<p>从官网下载的SDK包里面包含了<strong>jar</strong>, <strong>javadoc</strong>,<strong>jni</strong>三个目录，分别代表jar文件，API文件，SO库文件。</p>
+</blockquote>
+<p>配置步骤如下：</p>
+<ol>
+<li>将jar文件拷贝到工程的libs文件夹。</li>
+<li>将so库文件拷贝到工程响应的jni库目录。</li>
+<li>在应用程序启动的时候初始化MSmartSDK。<blockquote>
+<p>不同的项目，可能libs文件夹，so库文件都可能不一样，请根据实际情况进行操作。</p>
+</blockquote>
+</li>
+</ol>
+<p>Android权限配置如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&lt;uses-permission android:name=&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot;/&gt;  </div><div class="line">&lt;uses-permission android:name=&quot;android.permission.WAKE_LOCK&quot; /&gt;</div><div class="line">&lt;uses-permission android:name=&quot;android.permission.READ_EXTERNAL_STORAGE&quot; /&gt;</div><div class="line">&lt;uses-permission android:name=&quot;android.permission.FLASHLIGHT&quot; /&gt;</div><div class="line">&lt;uses-permission android:name=&quot;android.permission.CHANGE_WIFI_STATE&quot; /&gt;</div><div class="line">&lt;uses-permission android:name=&quot;android.permission.INTERNET&quot; /&gt;</div><div class="line">&lt;uses-permission android:name=&quot;android.permission.ACCESS_NETWORK_STATE&quot; /&gt;</div><div class="line">&lt;uses-permission android:name=&quot;android.permission.ACCESS_WIFI_STATE&quot; /&gt;</div><div class="line">&lt;uses-permission android:name=&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot; /&gt;</div><div class="line">&lt;uses-permission android:name=&quot;android.permission.ACCESS_FINE_LOCATION&quot; /&gt;</div><div class="line">&lt;uses-permission android:name=&quot;android.permission.ACCESS_COARSE_LOCATION&quot; /&gt;</div><div class="line">&lt;uses-permission android:name=&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot;/&gt;</div><div class="line">&lt;uses-permission android:name=&quot;android.permission.ACCESS_LOCATION_EXTRA_COMMANDS&quot; /&gt;</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p><strong>注意</strong>：</p>
+<ul>
+<li>目前市场上主要的Android系统为5.0,6.0。因为6.0增加了用户动态权限，SDK需要动态申请的权限包括Manifest.permission.ACCESS_FINE_LOCATION和Manifest.permission.ACCESS_COARSE_LOCATION这两个权限。建议在APP启动的时候就检查这两个权限是否开通。</li>
+<li>在新的手机上基本都关闭了APP的默认权限，请检查: <em>设置</em>—<em>应用</em>—<em>您的APP</em>—<em>权限</em>， 请打开APP所有的权限设置。</li>
+<li>因为Android 6.0及以上系统的限制，网络操作一般需要打开GPS开关，请在系统设置界面位置信息里面开启位置信息。</li>
+</ul>
+</blockquote>
+<h2 id="功能业务介绍"><a href="#功能业务介绍" class="headerlink" title="功能业务介绍"></a>功能业务介绍</h2><blockquote>
+<p>按照SDK所提供的功能分类进行介绍SDK如何进行快速接入使用。  </p>
+</blockquote>
+<h3 id="业务流程"><a href="#业务流程" class="headerlink" title="业务流程"></a>业务流程</h3><ol>
+<li>SDK初始化。</li>
+<li>注册账号。</li>
+<li>登陆账号。</li>
+<li>设备配网。</li>
+<li>设备控制。</li>
+</ol>
+<h3 id="主要业务介绍"><a href="#主要业务介绍" class="headerlink" title="主要业务介绍"></a>主要业务介绍</h3><ol>
+<li>接口调用规则。</li>
+<li>注册/登陆业务。</li>
+<li>配网业务。</li>
+<li>局域网扫描业务。</li>
+<li>设备控制业务。</li>
+</ol>
+<h3 id="接口调用原则"><a href="#接口调用原则" class="headerlink" title="接口调用原则"></a>接口调用原则</h3><p>SDK的大部分接口都是异步接口，意味着大部分接口都必须传入一个callback。Midea SDK的callback采用了泛型机制，回调的数据存放在bundle中，以此来提高SDK未来的扩展性。回调分为三种类型：</p>
+<ul>
+<li>无数据回调，仅仅提示成功和错误的回调:MSmartCallback。</li>
+<li>携带数据回调,成功的时候携带回请求的数据:MSmartDataCallback<t>。</t></li>
+<li>携带流程步骤的回调，继承了MSmartDataCallback，同时在流程进行过程中反馈流程步骤：MSmartStepDataCallback.<blockquote>
+<p>在SDK中大部分携带数据的回调泛型为：MSmartDataCallback<bundle>类型。MSmartStepDataCallback主要用在配网流程返回配网的每一个步骤。</bundle></p>
+</blockquote>
+</li>
+</ul>
+<p>SDK所有的接口都是线程安全的（注意：都派发到了主线程中），并且回调无论成功/错误/步骤回调都运行在主线程。<br>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">MSmartUserManager mUserManager = (MSmartFamilyDeviceManager) MSmartSDK.getInstance().getSDKManager(MSmartSDK.DEVICE_MANAGER_NAME);  </div><div class="line">mUserManager.loginWithAccount(userAccount, password, extraData, new MSmartCallback() &#123;</div><div class="line">                    @Override</div><div class="line">                    public void onComplete() &#123;</div><div class="line">                        //在主线程</div><div class="line">                    &#125;</div><div class="line"></div><div class="line">                    @Override</div><div class="line">                    public void onError(MSmartErrorMessage errMsg) &#123;</div><div class="line">                        //在主线程</div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">        );</div></pre></td></tr></table></figure></p>
+<h3 id="SDK初始化"><a href="#SDK初始化" class="headerlink" title="SDK初始化"></a>SDK初始化</h3><p>SDK需要使用从开放官网申请的AppKey，AppID,AppSrc三个参数初始化SDK。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">MSmartSDK.getInstance().initSDKWithAppID(Context, appID, appKey, appSrc);</div></pre></td></tr></table></figure>
+<blockquote>
+<p>未初始化的SDK无法调用，一般推荐的应用的自定义Application的onCreate()里面进行初始化，重复初始化无影响，SDK会以第一次初始化参数为准。</p>
+</blockquote>
+<h3 id="业务接口获取"><a href="#业务接口获取" class="headerlink" title="业务接口获取"></a>业务接口获取</h3><p>Midea包含三大业务：</p>
+<ol>
+<li>用户管理业务:提供用户注册，登陆，修改信息等功能。接口：MSmartUserManger。</li>
+<li>家庭管理管理业务：仅限家庭租业务模型SDK存在，提供家庭的增删改查等功能。接口：MSmartUserManager。</li>
+<li>设备管理业务：提供设备配网，查找，修改，控制等功能。设备管理在家庭组和单用户两套业务模型下对应的接口不同。  <ol>
+<li>家庭设备管理：仅限在家庭组业务模型下存在，接口：MSmartFamilyDeviceManager。  </li>
+<li>用户设备管理：仅限在单用户业务模型下存在，接口：MSmartUserDeviceManager。</li>
+</ol>
+</li>
+</ol>
+<p>这些业务管理类的获取方式都是通过MSmartSDK这个对外单例类提供：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">//获取用户管理接口</div><div class="line">MSmartUserManager mUserManager = (MSmartUserManager) MSmartSDK.getInstance().getSDKManager(MSmartSDK.USER_MANAGER_NAME);</div><div class="line"></div><div class="line">//获取家庭管理接口,单用户模型下获取无效</div><div class="line">MSmartFamilyManager mFamilyManager = (MSmartFamilyManager)MSmartSDK.getInstance().getSDKManager(MSmartSDK.FAMILY_MANAGER_NAME);</div><div class="line"></div><div class="line">//获取家庭设备管理接口，单用户模型下获取无效</div><div class="line">MSmartFamilyDeviceManager mDeviceManager = (MSmartFamilyDeviceManager)MSmartSDK.getInstance().getSDKManager(MSmartSDK.DEVICE_MANAGER_NAME);</div><div class="line"></div><div class="line">//获取用户设备管理接口，家庭组模型下获取无效</div><div class="line">mDeviceManager = (MSmartUserDeviceManager) MSmartSDK.getInstance().getSDKManager(MSmartSDK.DEVICE_MANAGER_NAME);</div></pre></td></tr></table></figure>
+<blockquote>
+<p>注意：家庭组模型下是不存在MSmartUserDeviceManager这个类的，单用户下是不存在MSmartFamilyManager,MSmartFamilyDeviceManager.</p>
+</blockquote>
+<h3 id="注册-登陆业务"><a href="#注册-登陆业务" class="headerlink" title="注册/登陆业务"></a>注册/登陆业务</h3><p>SDK支持如下几种账号的注册/登陆：</p>
+<ol>
+<li>手机号注册/登陆：使用手机注册和登陆，注册前需要获取手机短信验证码。</li>
+<li>邮箱注册/登陆：使用邮箱地址注册和登陆，会收到激活邮件。未激活的账号将无法进行修改操作。</li>
+<li>美家账号注册/登陆：仅限美的内部事业部美家账号。</li>
+<li>QQ登陆：使用QQ的授权机制进行第三方登陆，无需注册。</li>
+<li>微信登陆：使用微信的授权机制进行第三方登陆，无需注册。<blockquote>
+<p>Midea SDK要求登陆之后才能使用。</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="配网业务"><a href="#配网业务" class="headerlink" title="配网业务"></a>配网业务</h3><p>Midea SDK的配网业务是SDK的核心业务之一，其功能是将美的家电配置连接到家庭路由器上，从而实现家电联网和连接美的智慧云。<br>Midea SDK支持的配网方式：</p>
+<ol>
+<li>AP配网。</li>
+<li>快连配网。</li>
+</ol>
+<p>Midea SDK配网的主要流程： </p>
+<ol>
+<li>扫描家电二维码。</li>
+<li>配网。</li>
+<li>激活/绑定。 </li>
+</ol>
+<p>Midea SDK配网相关接口：</p>
+<blockquote>
+<p>因为配网操作是设备管理，所以方法来自配网管理接口：<em>MSmartFamilyDeviceManager</em>或<em>MSmartUserDeviceManager</em></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>方法名称</th>
+<th>方法说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>startConfigureDevice</td>
+<td>启动配网</td>
+</tr>
+<tr>
+<td>resumeConfigureDevice</td>
+<td>恢复配网</td>
+</tr>
+<tr>
+<td>stopConfigureDevice</td>
+<td>停止配网</td>
+</tr>
+</tbody>
+</table>
+<p>Midea SDK配网状态转移图：<br><img src="https://github.com/midea-sdk-org/android-sdk/blob/master/images/config_status_trans.png?raw=true" alt="配网状态转移图">  </p>
+<p>恢复配网说明：<br>状态转移图中可恢复型错误目前主要有：   </p>
+<ol>
+<li>启用WIFI失败。</li>
+<li>连接路由器失败。</li>
+<li>连接设备热点失败。</li>
+<li>重新连接路由器失败。    </li>
+</ol>
+<p>在配网过程中，不管是哪一种失败，都会触发错误回调。但是在以上几种可恢复性错误回调中，会返回携带数据，如果携带的数据中包含boolean类型的数据：<em>manualOperation</em>,且该参数的值为true，流程才会进入等等状态，等待用户完成指定操作以后，调用resumeConfigureDevice继续之前的配网流程。<br>配网过程是一个闭包的过程,resumeCofigureDevice恢复配网以后，配网的进度和结果还是通过startConfigureDevice传入的callback进行回调通知。</p>
+<blockquote>
+<p>建议：在新配网或者添加局域网设备(<strong><em>addDevice</em></strong>)之前，可以调用一下stopConfigureDevice避免意外干扰。  </p>
+</blockquote>
+<h3 id="局域网扫描业务"><a href="#局域网扫描业务" class="headerlink" title="局域网扫描业务"></a>局域网扫描业务</h3><p>局域网扫描功能能够在扫描到当前路由器下所有已经连接路由的家电设备。<br>Midea SDK配网相关接口：</p>
+<table>
+<thead>
+<tr>
+<th>方法名称</th>
+<th>方法说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>startScanLanDevice</td>
+<td>启动设备扫描任务</td>
+</tr>
+<tr>
+<td>registerDeviceScanListener</td>
+<td>注册局域网设备监听器</td>
+</tr>
+<tr>
+<td>removeDeviceScanListener</td>
+<td>移除局域网设备监听器</td>
+</tr>
+</tbody>
+</table>
+<p>startScanLanDevice 和 registerDeviceScanListener都能够回调局域网中的设备，但是二者的区别在于：  </p>
+<ol>
+<li>startScanLanDevice: 是一个任务化的接口，扫描指定时间范围内的所有设备信息，会立即启动一个扫描周期。</li>
+<li>registerDeviceScanListener: 是一个即时接口，不会立即启动扫描，但收到设备立即返回，每次返回一个设备，可以长期监听局域网设备情况。</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">void startScanLanDevice(int time,MSmartDataCallback&lt;List&lt;android.os.Bundle&gt;&gt; callback)</div></pre></td></tr></table></figure>
+<p>所以如果希望快速扫描到局域网的某个设备，可以按照如下方式进行调用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">//会立即启动一个扫描周期</div><div class="line">mDeviceManager.startScanLanDevice(0,null);</div><div class="line">mDeviceManager.registerDeviceScanListener(listener);</div></pre></td></tr></table></figure>
+<h3 id="设备控制业务"><a href="#设备控制业务" class="headerlink" title="设备控制业务"></a>设备控制业务</h3><p>设备控制涉及的接口：</p>
+<table>
+<thead>
+<tr>
+<th>接口名称</th>
+<th>接口说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sendDeviceData</td>
+<td>直接发送设备二进制控制命令</td>
+</tr>
+<tr>
+<td>queryDeviceState</td>
+<td>查询设备的Profile状态</td>
+</tr>
+<tr>
+<td>getDeviceState</td>
+<td>直接返回缓存的设备Profile状态</td>
+</tr>
+<tr>
+<td>updateDeviceState</td>
+<td>使用设备Profile控制设备</td>
+</tr>
+</tbody>
+</table>
+<p>设备控制分为两种不同的方式：</p>
+<ol>
+<li>直接发送设备二进制控制命令。</li>
+<li>发送设备属性Profie进行控制。</li>
+</ol>
+<p><strong>直接发送设备二进制控制命令</strong>：  由上层封装好设备的控制命令，SDK收到命令后直接发送给设备，然后等待设备响应并回调设备响应的数据。    </p>
+<p>接口定义：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">public void sendDeviceData(String deviceID, byte[] data,MSmartDataCallback&lt;byte[]&gt; callback);</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>注意：设备控制响应超时时间为10s</p>
+</blockquote>
+<p><strong>发送设备属性Profie进行控制</strong>：将设备的功能进行阅读性更好的Profie定义，例如：<em>{“power”:”on”}</em>。这样每次控制只需要传入这样的json字符串或者Key-Value定义，就可以实现对设备的控制，无需关注设备电控协议，以一种更加可读的方式进行设备控制。<br>控制接口定义：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">void updateDeviceState(String deviceID,Map&lt;String,String&gt; stateMap,MSmartDataCallback&lt;MSmartDeviceState&gt; callback)</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>说明：每一个美的家电都有一份Profie定义文档，请在开放官网进行下载查看。</p>
+</blockquote>
+<h2 id="SDK事件"><a href="#SDK事件" class="headerlink" title="SDK事件"></a>SDK事件</h2><p>SDK的事件通过事件码进行区分，事件码定义在MSmartEventCode这个接口中。<br>相关的接口：</p>
+<table>
+<thead>
+<tr>
+<th>接口名称</th>
+<th>方法名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MSmartSDK</td>
+<td>registerSDKEventListener</td>
+<td>注册事件监听</td>
+</tr>
+<tr>
+<td>MSmartSDK</td>
+<td>removeSDKEventListener</td>
+<td>取消事件监听</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>注意：不同的事件所携带返回的数据不同，请仔细阅读MSmartEventCode这个类关于各个事件码的定义及返回数据。</p>
+</blockquote>
+<h2 id="SDK推送"><a href="#SDK推送" class="headerlink" title="SDK推送"></a>SDK推送</h2><p>SDK的事件上报比较依赖推送，因此需要配置推送。SDK使用了极光推送组件，相关的推送KEY需要联系技术支持人员进行分配，后续会在开发者官网进行自动化申请。推送需要APP进行配置，并没有集成在SDK中，APP在收到推送之后需要将推送消息派发给SDK进行处理，SDK处理完毕后会以不同的事件回调的方式通知到APP。<br>相关的接口：</p>
+<table>
+<thead>
+<tr>
+<th>接口名称</th>
+<th>方法名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MSmartSDK</td>
+<td>handlePushMessage</td>
+<td>处理推送消息</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>注意：极光推送的配置，直接参照官网进行配置即可，但是JPUSH_APPKEY是需要联系我们技术人员进行分配的，极光官网申请的无效。</p>
+</blockquote>
+<h1 id="其它接口说明"><a href="#其它接口说明" class="headerlink" title="其它接口说明"></a>其它接口说明</h1><ol>
+<li>开启SDK日志:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>接口名称</th>
+<th>方法名称</th>
+<th>接口说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MSmartSDK</td>
+<td>enableLog</td>
+<td>开启SDK日志显示，正式发布时需要关闭日志</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>数据同步：</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>接口名称</th>
+<th>方法名称</th>
+<th>接口说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MSmartUserDeviceManager/MSmartFamilyDeviceManager</td>
+<td>syncCloudData</td>
+<td>与云端进行数据同步</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>说明：登陆的时候会对云端数据进行本地缓存，以加快业务接口速度，如果涉及到一个账号多端登陆，为避免拉取设备列表/家庭列表与服务器出现不一致，可以调用syncCloudData进行数据同步。</p>
+</blockquote>
+<h1 id="技术支持"><a href="#技术支持" class="headerlink" title="技术支持"></a>技术支持</h1><ul>
+<li>王攀(pan.wang@midea.com)</li>
+</ul>
+<h1 id="API文档"><a href="#API文档" class="headerlink" title="API文档"></a>API文档</h1><ul>
+<li><a href="./api/javadoc_family/index.html">家庭组API文档</a>;  </li>
+<li><a href="./api/javadoc_user/index.html">单用户API文档</a>;  </li>
+</ul>
+<h1 id="SDK下载"><a href="#SDK下载" class="headerlink" title="SDK下载"></a>SDK下载</h1><ul>
+<li><a href="./MideaSDK/MideaSDK-3.1.3(IPF-R66EC">家庭组SDK</a>.zip);</li>
+<li><a href="./MideaSDK/MideaSDK-3.1.3(IPU-R66EC">单用户SDK</a>.zip);</li>
+</ul>
+</div><div class="tags"><a href="../../../../tags/Midea/">Midea</a><a href="../../../../tags/Midea-SDK/">Midea SDK</a><a href="../../../../tags/说明文档/">说明文档</a></div><div class="post-nav"><a href="../../13/midea-sdk-brief/" class="pre">MideaSDK 简介</a></div><div id="lv-container" data-id="city" data-uid="MTAyMC8zMDg0Mi83Mzkx"><script>(function(d, s) {
+   var j, e = d.getElementsByTagName(s)[0];
+   if (typeof LivereTower === 'function') { return; }
+   j = d.createElement(s);
+   j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+   j.async = true;
+   e.parentNode.insertBefore(j, e);
+})(document, 'script');</script></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form action="//www.baidu.com/baidu" method="get" accept-charset="utf-8" target="_blank" class="search-form"><input type="search" name="word" maxlength="20" placeholder="Search"/><input type="hidden" name="si" value=""/><input name="tn" type="hidden" value="bds"/><input name="cl" type="hidden" value="3"/><input name="ct" type="hidden" value="2097152"/><input name="s" type="hidden" value="on"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="../../../../categories/业界新闻/">业界新闻</a></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/文档/">文档</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="../../../../tags/说明文档/" style="font-size: 15px;">说明文档</a> <a href="../../../../tags/news/" style="font-size: 15px;">news</a> <a href="../../../../tags/iPhone8售价/" style="font-size: 15px;">iPhone8售价</a> <a href="../../../../tags/iPhone8价格/" style="font-size: 15px;">iPhone8价格</a> <a href="../../../../tags/Midea/" style="font-size: 15px;">Midea</a> <a href="../../../../tags/Midea-SDK/" style="font-size: 15px;">Midea SDK</a> <a href="../../../../tags/iPhone8/" style="font-size: 15px;">iPhone8</a> <a href="../../../../tags/MideaSDK/" style="font-size: 15px;">MideaSDK</a> <a href="../../../../tags/SDK/" style="font-size: 15px;">SDK</a> <a href="../../../../tags/文档/" style="font-size: 15px;">文档</a> <a href="../../../../tags/局域网扫描/" style="font-size: 15px;">局域网扫描</a> <a href="../../../../tags/技术/" style="font-size: 15px;">技术</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="../../18/mideasdk3.0更新日志/">mideasdk3.0更新日志</a></li><li class="post-list-item"><a class="post-list-link" href="../../18/ios-quick-menaul/">ios-quick-menaul</a></li><li class="post-list-item"><a class="post-list-link" href="../../13/midea-sdk-lan-scan/">Android MideaSDK局域网扫描详解</a></li><li class="post-list-item"><a class="post-list-link" href="../../13/iphone8-price/">iPhone 8全系价格曝光 最高“只要”9千元</a></li><li class="post-list-item"><a class="post-list-link" href="../../13/midea-sdk-brief/">MideaSDK 简介</a></li><li class="post-list-item"><a class="post-list-link" href="">MideaSDK 3.0 快速集成说明</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="http://msmart.midea.com/" title="美的智慧家居科技有限公司" target="_blank">美的智慧家居科技有限公司</a><ul></ul><a href="http://iot.midea.com/" title="美的智慧家居科开放中心" target="_blank">美的智慧家居科开放中心</a><ul></ul><a href="http://www.midea.com/cn/about_midea/Group_profile/?mtag=40005.1.2" title="美的集团" target="_blank">美的集团</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2017 <a href="../../../../." rel="nofollow">Midea Smart Technology Co.,Ltd..</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a></div></div></div><a id="rocket" href="#top" class="show"></a><script type="text/javascript" src="../../../../js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/3.1.20/jquery.fancybox.min.js" async></script><script type="text/javascript" src="../../../../js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/3.1.20/jquery.fancybox.min.css"><script type="text/javascript" src="../../../../js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="../../../../js/smartresize.js?v=0.0.0"></script></div></body></html>
