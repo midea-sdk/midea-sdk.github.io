@@ -1,0 +1,2501 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>MSmartErrorCode Constants Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">MSmartSDK_V3.1.49 </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Midea Smart Technology Co., LTD.</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+
+	
+
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">MSmartErrorCode Constants Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Declared in</th>
+	<td>MSmartErrorCode.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+
+					
+
+                    
+                    <h3 class="subsubtitle method-title">MSmartErrorCode</h3>
+                    
+					
+					<div class="section section-overview">
+                        <p>错误码定义 Error code definition</p><div class="note"><p><strong>Note:</strong> 如出现2XXXX错误码，则为SDK未收录的服务器错误码，该错误码为XXXX.If the errorCode is 2XXXX,means that is the M-Cloud errorCode ,the errorCode is XXXX.</p>
+
+<ul>
+<li>ERROR_SUCCESS: 执行成功 success</li>
+<li>ERROR_INIT_SDK_FAILED: 初始化SDK失败,尚未初始化SDK或者未登录 Error initialized or didn’t login</li>
+<li>ERROR_UNKNOW_ERROR: 未知错误 Unknown Error</li>
+<li>ERROR_FAILD: 服务器9999错误 9999 error of server</li>
+<li>ERROR_NETWORK_DISCONNECT: 无法连接网络 Network is not available</li>
+<li>ERROR_REQUEST_ADDRESS_NULL: 请求的地址不存在 Request url not found</li>
+<li>ERROR_PARAMS_NULL: 参数为空 Parameter Error, can’t be Null</li>
+<li>ERROR_PARAMS_INVALID: 参数不合法 Invalid Parameter</li>
+<li>ERROR_PARAMS_FORMAT_WRONG: 参数格式不正确 Format Error</li>
+<li>ERROR_PARAMS_TOO_LONG: 参数值太长 Format too long</li>
+<li>ERROR_NO_PERMISSION: 您没有权限进行该操作 Permission Denied</li>
+<li>ERROR_SESSION_OUT: session失效 Invalid session</li>
+<li>ERROR_APPID_NOT_EXIST: appid不存在 The appId does not exist</li>
+<li>ERROR_UPDATE_FAILD: 获取更新信息失败 Failed to get update</li>
+<li>ERROR_DATABASE_ERROR: 数据库错误 Database Error</li>
+<li>ERROR_UPLOADLOG_FAILD: 上传错误日志失败 Failed to upload log</li>
+<li>ERROR_LOGIN_FAILD: 用户登录失败,请重新登录 Login Failed, Please try again</li>
+<li>ERROR_LOGIN_TOKEN: 获取登录token失败 Failed to get token</li>
+<li>ERROR_LOGIN_GETTYPE: 获取设备类型失败 Failed to get device type</li>
+<li>ERROR_LOGIN_HOMEGROUP: 获取家庭组失败 Failed to get home group</li>
+<li>ERROR_LOGIN_MOBILENUM: 手机号不合规 Invalid Phone number</li>
+<li>ERROR_LOGIN_EMAIL: 邮箱不合规 Invalid mail address</li>
+<li>ERROR_LOGIN_EMAIL_OR_MOBILENUM: 密码或手机号不合规 Invalid phone number or password</li>
+<li>ERROR_LOGIN_PASSWORD: 密码不合规 Invalid password</li>
+<li>ERROR_LOGIN_ACCOUNT_ERROR: 美居返回账号或者密码错误 Error response (Account or Password) from M-Cloud</li>
+<li>ERROR_LOGIN_ACCOUNT_NOT_EXIST: 账号不存在 Invalid Account</li>
+<li>ERROR_LOGIN_TOKEN_INVALID: 验证token失败 Invalid token</li>
+<li>ERROR_ANOTHER_LONIGED: 此账号在其他地方登陆 This account login on another device</li>
+<li>ERROR_LOGIN_ACCOUNT_FORBIDDEN: 此账号被禁用 This Account is banned</li>
+<li>ERROR_NOT_LONIGED: 没登录 You need to login first</li>
+<li>ERROR_EMAIL_NOT_ACTIVE: 邮箱未激活 Account not actived</li>
+<li>ERROR_EMAIL_ALREADY_REGISTER: 邮箱已经注册过了 This mail address is already registered</li>
+<li>ERROR_ACCOUNT_ALREADY_ACTIVE: 账号已经激活了 The account is activated</li>
+<li>ERROR_THIRD_ALREADY_BIND: 当前第三方用户已绑定 Refresh token is invalid</li>
+<li>ERROR_THIRD_NOT_BIND: 当前第三方用户尚未绑定 Refresh token is expired</li>
+<li>ERROR_PHONE_ALREADY_REGISTER: 手机已经注册过了 This Phone number is already registered</li>
+<li>ERROR_VERTIFYCODE_WRONG: 验证码错误 Verify Code Error</li>
+<li>ERROR_LOGIN_GET_DEVICE_FAILD: 登陆时同步设备列表失败 Get deviceList failed during login</li>
+<li>ERROR_VERIFICATION_REPEAT: 重置密码的时候,反复调用重置接口 Verification code error,too many errors</li>
+<li>ERROR_LOGINID_NULL: 服务器返回loginId为空 LoginId Null</li>
+<li>ERROR_SERVER_BACKRESULT: 服务器返回result数据缺失 Error back result from M-Cloud</li>
+<li>ERROR_SSID_INVALID: SSID错误 Invalid SSID</li>
+<li>ERROR_QRCODE_INVALID: 二维码错误 Invalid QRCode</li>
+<li>ERROR_DEVICE_TYPE_NOT_EXIST: 家电类型不存在 Device type does not exist in Midea Home</li>
+<li>ERROR_SSID_PASSWORD_SEND: SSID和密码发送失败 Failed to send SSID and Password</li>
+<li>ERROR_NETWORK_NOT_CHANGE: 网络未切换 Failed to change Wi-Fi network</li>
+<li>ERROR_BIND_FAILED_CHECK_WIFI: 绑定失败，请检查wifi模块，请先链接上设备 AP Bind error, Please check the Wi-Fi module</li>
+<li>ERROR_ACTIVE_FAILED: 远程激活失败 Active Failed</li>
+<li>ERROR_DEVICE_ALREADY_IN_FAMILY: 设备已经在家庭中 Device already in family</li>
+<li>ERROR_DEVICE_NOT_IN_FAMILY: 设备不在家庭中 Device not in family</li>
+<li>ERROR_CONFIGURE_FAILED: 配置家电失败 Failed to configure the Appliance</li>
+<li>ERROR_DEVICE_UNKNOW: 非美的设备 Unknown Device, the Wi-Fi AP SSID must start with fixed format</li>
+<li>ERROR_CONNECT_FAILED: 美的设备链接失败 Failed to connect to Midea Appliance</li>
+<li>ERROR_CONNECT_INIT_FAILED: 连接设备初始化失败 Failed to initialize the device connection</li>
+<li>ERROR_WIFI_NETWORK_INVALID: 请先连接家庭WIFI Please connect to a Wi-Fi network first</li>
+<li>ERROR_DEVICE_LIST_FAILED: 获取当前设备列表失败 Failed to get device list</li>
+<li>ERROR_DEVICE_BINDINFO_FAILED: 同步设备信息失败 Failed to update the device info</li>
+<li>ERROR_DEVICEID_INVALID: 设备ID错误(家电不存在) DeviceId Error, Device not exists</li>
+<li>ERROR_NOT_ACTIVED: 设备没有激活(没有绑定) Device is not activated. Please bind it first</li>
+<li>ERROR_DEVICE_OFFINE: 设备没有连接上广域网 Device is not connected to the WAN</li>
+<li>ERROR_DEVICEINFO_ERROR: 同步家电信息失败 Synchronous device information failure</li>
+<li>ERROR_DEVICEI_NOT_BELONG_FAMILY: 设备不属于家庭 Device does not belong to the family</li>
+<li>ERROR_APPLIANCE_NULL: 设备ID为空 Appliance ID is null</li>
+<li>ERROR_DEVICELIST_NULL_SCANLAN_FIRST: 请先扫描局域网 Please scan devices in the LAN first</li>
+<li>ERROR_DEVICELIST_NOT_FOUND: 暂时找不到设备 No device found</li>
+<li>ERROR_DEVICE_STARTIDENTIFY_BYDEVICE: 开始硬件鉴权 Hardware Authentication is in operation</li>
+<li>ERROR_DEVICE_NEED_IDENTIFY: 设备需要鉴权 Please make the Device Authentication First</li>
+<li>ERROR_DEVICE_TRANSPORT_OVERTIME: 数据透传超时 Data sending is timeout</li>
+<li>ERROR_DEVICE_SN_INVALID: SN非法 DeviceSn is illegal</li>
+<li>ERROR_DEVICE_IDENTIFY_TIMEOUT: 设备鉴权超时 Device authentication is timeout</li>
+<li>ERROR_DEVICE_UNBIND_FAILD: 设备解绑失败 It is failed to unbind the device</li>
+<li>ERROR_DEVICE_ALREADY_BIND: 设备已经被他人绑定 Device is already bound by other user</li>
+<li>ERROR_DEVICE_ALREADY_YOURS: 设备已绑定过 Device is already bound</li>
+<li>ERROR_DEVICE_LIST_NULL: 设备列表为空 No device found</li>
+<li>ERROR_PRODUCTCODE_ALREADY_EXIST: 条形码已存在 Bar code exists</li>
+<li>ERROR_DEVICE_SHARE_SELF: 设备不能分享给自己/不能向自己请求设备分享 Already your friends</li>
+<li>ERROR_DEVICE_IN_HOME: 家庭中的设备不能被分享 Home device cannot be shared</li>
+<li>ERROR_DEVICE_IDENTIFYBYDEVICE_FAILD: 设备主动鉴权失败 Device Authentication (issued from device) error</li>
+<li>ERROR_DEVICE_IDENTIFYBYSLK_FAILD: SLK主动鉴权失败 Device Authentication (issued from SLK) error</li>
+<li>ERROR_DEVICE_IDENTIFY_SUCCESSED: 鉴权成功 Authentication Successful</li>
+<li>ERROR_DEVICE_UNABLE_GET_COUPONS: 该用户不能获取优惠券，没有资格获取优惠券 This user can’t get the coupons</li>
+<li>ERROR_DEVICE_COUPON_RUN_OUT_OF: 优惠券已用完 No more Coupons</li>
+<li>ERROR_DEVICE_COUPON_DECRYPT_ERROR: 优惠券code解密失败 Coupon code decrypt error</li>
+<li>ERROR_DEVICE_COUPON_NOT_POINT: 该优惠券类型没有文案 Coupon not point</li>
+<li>ERROR_DEVICE_NOT_IN_LAN: 设备不在局域网内 Device is not in LAN</li>
+<li>ERROR_DEVICE_MODULEINFO_FAILED: 获取设备类型失败 Get module info failed</li>
+<li>ERROR_MODULE_UPDATE_FAILED: 升级模块失败，超时 Update module failed</li>
+<li>ERROR_MODULE_UPDATE_UNKNOW: 升级模块失败，未知消息 Update module unknow message</li>
+<li>ERROR_MODULE_UPDATE_UNFINDFILE: 升级模块失败，升级文件未找到 Do not find file</li>
+<li>ERROR_MODULE_UPDATE_DOWNLOAD_FAILED: 升级模块失败，下载错误 Download failed</li>
+<li>ERROR_MODULE_UPDATE_CHECKSUM: 升级模块失败，升级Image文件checksum错误 CheckSum failed</li>
+<li>ERROR_MODULE_UPDATE_TFTP_TIMEOUT: 升级模块失败，TFTP server响应超时 Tftp server is time out</li>
+<li>ERROR_MODULE_UPDATE_WRONG_NAME: 升级模块失败，错误的文件名 File&rsquo;s name is wrong</li>
+<li>ERROR_MODULE_UPDATE_PROTOCOL: 升级模块失败，协议不支持 The protocol is not supported</li>
+<li>ERROR_MODULE_UPDATE_INDEX: 升级模块失败，无效的分区索引 Wrong index</li>
+<li>ERROR_MODULE_UPDATE_IMAGEHDR: 升级模块失败，IMAGE_HDR错误 Image_hdr wrong</li>
+<li>ERROR_MODULE_RESTART_FAILED: 重启模块失败 Restart module failed</li>
+<li>ERROR_HOME_WIFI_BSSID_INVALID: 路由器Bssid不合法 Home WiFi BSSID invalid</li>
+<li>ERROR_INVALID_FAMILY_ID: 家庭id不合法 Invalid Family ID</li>
+<li>ERROR_USER_ALREADY_IN_FAMILY: 该用户已经是家庭成员 This user is already a member of this group</li>
+<li>ERROR_USER_NOT_IN_FAMILY: 该用户不是家庭成员 This user is not a member of this group</li>
+<li>ERROR_INVALID_USER_ID: 用户id不合法 Invalid User ID</li>
+<li>ERROR_NOT_FAMILY_HEAD: 你不是该家庭家长，没有权限做此操作 Permission denied, you are not the owner of this group</li>
+<li>ERROR_FAMILYMEMBER_GETFAILD: 获取家庭成员列表失败 Failed to get family members list</li>
+<li>ERROR_FAMILY_NOT_EXIST: 家庭不存在 This Family not exists</li>
+<li>ERROR_USER_NOT_INVITE_TO_FAMILY: 用户未申请加入家庭,或者未邀请用户加入家庭 The user is not invited to join the group</li>
+<li>ERROR_FAMILY_HEAD_CANNOT_QUIT: 家长不能退出家庭 The owner of the group can’t leave the group</li>
+<li>ERROR_CANNOT_MODIFY_CREATE_ROLE: 不能修改创建者角色 You can not modify the role of creator</li>
+<li>ERROR_NONE_CREATER_ERROR: 家庭没有创建者 This family has no creator</li>
+<li>ERROR_CREATOR_ERROR: 当前用户不是家庭创建者 You are not the owner of the group</li>
+<li>ERROR_INVITE_REPEAT: 你已经邀请该用户了 You have already invited user</li>
+<li>ERROR_FAMILYLIST_GETFAILD: 获取家庭列表失败 Failed to get family list</li>
+<li>ERROR_ALEADY_SHARED: 设备已经分享给该用户了 The user have already shared the appliances</li>
+<li>ERROR_DEVICE_REPORT: 家电特殊状态上报 Special Status reporting</li>
+<li>ERROR_DEVICE_STATUS: 家电运行状态上报 Running status reporting</li>
+<li>ERROR_BLE_OTA: 蓝牙 OTA 升级中出错 BLE OTA error</li>
+<li>ERROR_B2BDEVICE_ALERT: b2b警戒推送 Alert status reporting</li>
+<li>MSDevProtocolCmdError: 获取指令失败 Get command fail</li>
+</ul>
+</div>
+					</div>
+					
+					
+                    <div class="section">
+                        <!-- display enum values -->
+                        
+                        <h4 class="method-subtitle">Definition</h4>
+                        <code>typedef NS_ENUM(NSInteger, MSmartErrorCode ) {<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_SUCCESS</a> = 0,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_INIT_SDK_FAILED</a> = -1,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_UNKNOW_ERROR</a> = 1000,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_FAILD</a> = 1001,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_NETWORK_DISCONNECT</a> = 1002,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_REQUEST_ADDRESS_NULL</a> = 1003,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_PARAMS_NULL</a> = 1004,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_PARAMS_INVALID</a> = 1005,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_PARAMS_FORMAT_WRONG</a> = 1006,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_PARAMS_TOO_LONG</a> = 1007,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_NO_PERMISSION</a> = 1009,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_SESSION_OUT</a> = 1010,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_APPID_NOT_EXIST</a> = 2002,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_UPDATE_FAILD</a> = 2003,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_DATABASE_ERROR</a> = 2004,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_UPLOADLOG_FAILD</a> = 2005,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_LOGIN_FAILD</a> = 3001,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_LOGIN_TOKEN</a> = 3002,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_LOGIN_GETTYPE</a> = 3003,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_LOGIN_HOMEGROUP</a> = 3004,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_LOGIN_MOBILENUM</a> = 3005,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_LOGIN_EMAIL</a> = 3006,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_LOGIN_EMAIL_OR_MOBILENUM</a> = 3007,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_LOGIN_PASSWORD</a> = 3008,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_LOGIN_ACCOUNT_ERROR</a> = 3010,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_LOGIN_ACCOUNT_NOT_EXIST</a> = 3011,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_LOGIN_TOKEN_INVALID</a> = 3012,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_ANOTHER_LONIGED</a> = 3013,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_LOGIN_ACCOUNT_FORBIDDEN</a> = 3014,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_NOT_LONIGED</a> = 3015,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_EMAIL_NOT_ACTIVE</a> = 3016,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_EMAIL_ALREADY_REGISTER</a> = 3017,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_ACCOUNT_ALREADY_ACTIVE</a> = 3020,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_THIRD_ALREADY_BIND</a> = 3021,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_THIRD_NOT_BIND</a> = 3022,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_PHONE_ALREADY_REGISTER</a> = 3023,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_VERTIFYCODE_WRONG</a> = 3024,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_LOGIN_GET_DEVICE_FAILD</a> = 3026,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_VERIFICATION_REPEAT</a> = 3027,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_LOGINID_NULL</a> = 3028,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_SERVER_BACKRESULT</a> = 3029,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_SSID_INVALID</a> = 4001,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_QRCODE_INVALID</a> = 4002,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_DEVICE_TYPE_NOT_EXIST</a> = 4005,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_SSID_PASSWORD_SEND</a> = 4010,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_NETWORK_NOT_CHANGE</a> = 4011,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_BIND_FAILED_CHECK_WIFI</a> = 4018,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_ACTIVE_FAILED</a> = 4020,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_DEVICE_ALREADY_IN_FAMILY</a> = 4022,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_DEVICE_NOT_IN_FAMILY</a> = 4023,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_CONFIGURE_FAILED</a> = 4025,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_DEVICE_UNKNOW</a> = 4026,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_CONNECT_FAILED</a> = 4027,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_CONNECT_INIT_FAILED</a> = 4028,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_WIFI_NETWORK_INVALID</a> = 4029,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_DEVICE_LIST_FAILED</a> = 4030,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_DEVICE_BINDINFO_FAILED</a> = 4031,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_DEVICEID_INVALID</a> = 4032,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_NOT_ACTIVED</a> = 4033,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_DEVICE_OFFINE</a> = 4034,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_DEVICEINFO_ERROR</a> = 4035,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_DEVICEI_NOT_BELONG_FAMILY</a> = 4036,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_APPLIANCE_NULL</a> = 4037,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_DEVICELIST_NULL_SCANLAN_FIRST</a> = 4038,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_DEVICELIST_NOT_FOUND</a> = 4039,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_DEVICE_STARTIDENTIFY_BYDEVICE</a> = 4040,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_DEVICE_NEED_IDENTIFY</a> = 4041,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_DEVICE_TRANSPORT_OVERTIME</a> = 4042,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_DEVICE_SN_INVALID</a> = 4044,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_DEVICE_IDENTIFY_TIMEOUT</a> = 4047,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_DEVICE_UNBIND_FAILD</a> = 4048,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_DEVICE_ALREADY_BIND</a> = 4049,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_DEVICE_ALREADY_YOURS</a> = 4050,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_DEVICE_LIST_NULL</a> = 4052,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_PRODUCTCODE_ALREADY_EXIST</a> = 4053,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_DEVICE_SHARE_SELF</a> = 4054,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_DEVICE_IN_HOME</a> = 4055,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_DEVICE_IDENTIFYBYDEVICE_FAILD</a> = 4056,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_DEVICE_IDENTIFYBYSLK_FAILD</a> = 4057,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_DEVICE_IDENTIFY_SUCCESSED</a> = 4058,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_DEVICE_UNABLE_GET_COUPONS</a> = 4059,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_DEVICE_COUPON_RUN_OUT_OF</a> = 4060,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_DEVICE_COUPON_DECRYPT_ERROR</a> = 4061,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_DEVICE_COUPON_NOT_POINT</a> = 4062,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_DEVICE_NOT_IN_LAN</a> = 4063,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_DEVICE_MODULEINFO_FAILED</a> = 4064,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_MODULE_UPDATE_FAILED</a> = 4065,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_MODULE_UPDATE_UNKNOW</a> = 4067,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_MODULE_UPDATE_UNFINDFILE</a> = 4068,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_MODULE_UPDATE_DOWNLOAD_FAILED</a> = 4069,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_MODULE_UPDATE_CHECKSUM</a> = 4070,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_MODULE_UPDATE_TFTP_TIMEOUT</a> = 4071,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_MODULE_UPDATE_WRONG_NAME</a> = 4072,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_MODULE_UPDATE_PROTOCOL</a> = 4073,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_MODULE_UPDATE_INDEX</a> = 4074,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_MODULE_UPDATE_IMAGEHDR</a> = 4075,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_MODULE_RESTART_FAILED</a> = 4076,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_HOME_WIFI_BSSID_INVALID</a> = 4078,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_INVALID_FAMILY_ID</a> = 6002,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_USER_ALREADY_IN_FAMILY</a> = 6003,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_USER_NOT_IN_FAMILY</a> = 6004,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_INVALID_USER_ID</a> = 6005,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_NOT_FAMILY_HEAD</a> = 6006,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_FAMILYMEMBER_GETFAILD</a> = 6007,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_FAMILY_NOT_EXIST</a> = 6009,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_USER_NOT_INVITE_TO_FAMILY</a> = 6010,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_FAMILY_HEAD_CANNOT_QUIT</a> = 6011,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_CANNOT_MODIFY_CREATE_ROLE</a> = 6013,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_NONE_CREATER_ERROR</a> = 6014,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_CREATOR_ERROR</a> = 6015,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_INVITE_REPEAT</a> = 6016,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_FAMILYLIST_GETFAILD</a> = 6017,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_ALEADY_SHARED</a> = 7006,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_DEVICE_REPORT</a> = 9001,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_DEVICE_STATUS</a> = 9002,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_BLE_OTA</a> = 10001,<br>
+                            
+                            &nbsp;&nbsp; <a href="">ERROR_B2BDEVICE_ALERT</a> = 11001,<br>
+                            
+                            &nbsp;&nbsp; <a href="">MSDevProtocolCmdError</a> = 30012,<br>
+                            
+                            };</code>
+                    
+                    </div>
+                    
+                    <div class="section section-methods">
+                        <h4 class="method-subtitle">Constants</h4>
+                        <dl class="termdef">
+                            
+                            <dt><a name="" title="ERROR_SUCCESS"></a><code>ERROR_SUCCESS</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_INIT_SDK_FAILED"></a><code>ERROR_INIT_SDK_FAILED</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_UNKNOW_ERROR"></a><code>ERROR_UNKNOW_ERROR</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_FAILD"></a><code>ERROR_FAILD</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_NETWORK_DISCONNECT"></a><code>ERROR_NETWORK_DISCONNECT</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_REQUEST_ADDRESS_NULL"></a><code>ERROR_REQUEST_ADDRESS_NULL</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_PARAMS_NULL"></a><code>ERROR_PARAMS_NULL</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_PARAMS_INVALID"></a><code>ERROR_PARAMS_INVALID</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_PARAMS_FORMAT_WRONG"></a><code>ERROR_PARAMS_FORMAT_WRONG</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_PARAMS_TOO_LONG"></a><code>ERROR_PARAMS_TOO_LONG</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_NO_PERMISSION"></a><code>ERROR_NO_PERMISSION</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_SESSION_OUT"></a><code>ERROR_SESSION_OUT</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_APPID_NOT_EXIST"></a><code>ERROR_APPID_NOT_EXIST</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_UPDATE_FAILD"></a><code>ERROR_UPDATE_FAILD</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_DATABASE_ERROR"></a><code>ERROR_DATABASE_ERROR</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_UPLOADLOG_FAILD"></a><code>ERROR_UPLOADLOG_FAILD</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_LOGIN_FAILD"></a><code>ERROR_LOGIN_FAILD</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_LOGIN_TOKEN"></a><code>ERROR_LOGIN_TOKEN</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_LOGIN_GETTYPE"></a><code>ERROR_LOGIN_GETTYPE</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_LOGIN_HOMEGROUP"></a><code>ERROR_LOGIN_HOMEGROUP</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_LOGIN_MOBILENUM"></a><code>ERROR_LOGIN_MOBILENUM</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_LOGIN_EMAIL"></a><code>ERROR_LOGIN_EMAIL</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_LOGIN_EMAIL_OR_MOBILENUM"></a><code>ERROR_LOGIN_EMAIL_OR_MOBILENUM</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_LOGIN_PASSWORD"></a><code>ERROR_LOGIN_PASSWORD</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_LOGIN_ACCOUNT_ERROR"></a><code>ERROR_LOGIN_ACCOUNT_ERROR</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_LOGIN_ACCOUNT_NOT_EXIST"></a><code>ERROR_LOGIN_ACCOUNT_NOT_EXIST</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_LOGIN_TOKEN_INVALID"></a><code>ERROR_LOGIN_TOKEN_INVALID</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_ANOTHER_LONIGED"></a><code>ERROR_ANOTHER_LONIGED</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_LOGIN_ACCOUNT_FORBIDDEN"></a><code>ERROR_LOGIN_ACCOUNT_FORBIDDEN</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_NOT_LONIGED"></a><code>ERROR_NOT_LONIGED</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_EMAIL_NOT_ACTIVE"></a><code>ERROR_EMAIL_NOT_ACTIVE</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_EMAIL_ALREADY_REGISTER"></a><code>ERROR_EMAIL_ALREADY_REGISTER</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_ACCOUNT_ALREADY_ACTIVE"></a><code>ERROR_ACCOUNT_ALREADY_ACTIVE</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_THIRD_ALREADY_BIND"></a><code>ERROR_THIRD_ALREADY_BIND</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_THIRD_NOT_BIND"></a><code>ERROR_THIRD_NOT_BIND</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_PHONE_ALREADY_REGISTER"></a><code>ERROR_PHONE_ALREADY_REGISTER</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_VERTIFYCODE_WRONG"></a><code>ERROR_VERTIFYCODE_WRONG</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_LOGIN_GET_DEVICE_FAILD"></a><code>ERROR_LOGIN_GET_DEVICE_FAILD</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_VERIFICATION_REPEAT"></a><code>ERROR_VERIFICATION_REPEAT</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_LOGINID_NULL"></a><code>ERROR_LOGINID_NULL</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_SERVER_BACKRESULT"></a><code>ERROR_SERVER_BACKRESULT</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_SSID_INVALID"></a><code>ERROR_SSID_INVALID</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_QRCODE_INVALID"></a><code>ERROR_QRCODE_INVALID</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_DEVICE_TYPE_NOT_EXIST"></a><code>ERROR_DEVICE_TYPE_NOT_EXIST</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_SSID_PASSWORD_SEND"></a><code>ERROR_SSID_PASSWORD_SEND</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_NETWORK_NOT_CHANGE"></a><code>ERROR_NETWORK_NOT_CHANGE</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_BIND_FAILED_CHECK_WIFI"></a><code>ERROR_BIND_FAILED_CHECK_WIFI</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_ACTIVE_FAILED"></a><code>ERROR_ACTIVE_FAILED</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_DEVICE_ALREADY_IN_FAMILY"></a><code>ERROR_DEVICE_ALREADY_IN_FAMILY</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_DEVICE_NOT_IN_FAMILY"></a><code>ERROR_DEVICE_NOT_IN_FAMILY</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_CONFIGURE_FAILED"></a><code>ERROR_CONFIGURE_FAILED</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_DEVICE_UNKNOW"></a><code>ERROR_DEVICE_UNKNOW</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_CONNECT_FAILED"></a><code>ERROR_CONNECT_FAILED</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_CONNECT_INIT_FAILED"></a><code>ERROR_CONNECT_INIT_FAILED</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_WIFI_NETWORK_INVALID"></a><code>ERROR_WIFI_NETWORK_INVALID</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_DEVICE_LIST_FAILED"></a><code>ERROR_DEVICE_LIST_FAILED</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_DEVICE_BINDINFO_FAILED"></a><code>ERROR_DEVICE_BINDINFO_FAILED</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_DEVICEID_INVALID"></a><code>ERROR_DEVICEID_INVALID</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_NOT_ACTIVED"></a><code>ERROR_NOT_ACTIVED</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_DEVICE_OFFINE"></a><code>ERROR_DEVICE_OFFINE</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_DEVICEINFO_ERROR"></a><code>ERROR_DEVICEINFO_ERROR</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_DEVICEI_NOT_BELONG_FAMILY"></a><code>ERROR_DEVICEI_NOT_BELONG_FAMILY</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_APPLIANCE_NULL"></a><code>ERROR_APPLIANCE_NULL</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_DEVICELIST_NULL_SCANLAN_FIRST"></a><code>ERROR_DEVICELIST_NULL_SCANLAN_FIRST</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_DEVICELIST_NOT_FOUND"></a><code>ERROR_DEVICELIST_NOT_FOUND</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_DEVICE_STARTIDENTIFY_BYDEVICE"></a><code>ERROR_DEVICE_STARTIDENTIFY_BYDEVICE</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_DEVICE_NEED_IDENTIFY"></a><code>ERROR_DEVICE_NEED_IDENTIFY</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_DEVICE_TRANSPORT_OVERTIME"></a><code>ERROR_DEVICE_TRANSPORT_OVERTIME</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_DEVICE_SN_INVALID"></a><code>ERROR_DEVICE_SN_INVALID</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_DEVICE_IDENTIFY_TIMEOUT"></a><code>ERROR_DEVICE_IDENTIFY_TIMEOUT</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_DEVICE_UNBIND_FAILD"></a><code>ERROR_DEVICE_UNBIND_FAILD</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_DEVICE_ALREADY_BIND"></a><code>ERROR_DEVICE_ALREADY_BIND</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_DEVICE_ALREADY_YOURS"></a><code>ERROR_DEVICE_ALREADY_YOURS</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_DEVICE_LIST_NULL"></a><code>ERROR_DEVICE_LIST_NULL</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_PRODUCTCODE_ALREADY_EXIST"></a><code>ERROR_PRODUCTCODE_ALREADY_EXIST</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_DEVICE_SHARE_SELF"></a><code>ERROR_DEVICE_SHARE_SELF</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_DEVICE_IN_HOME"></a><code>ERROR_DEVICE_IN_HOME</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_DEVICE_IDENTIFYBYDEVICE_FAILD"></a><code>ERROR_DEVICE_IDENTIFYBYDEVICE_FAILD</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_DEVICE_IDENTIFYBYSLK_FAILD"></a><code>ERROR_DEVICE_IDENTIFYBYSLK_FAILD</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_DEVICE_IDENTIFY_SUCCESSED"></a><code>ERROR_DEVICE_IDENTIFY_SUCCESSED</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_DEVICE_UNABLE_GET_COUPONS"></a><code>ERROR_DEVICE_UNABLE_GET_COUPONS</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_DEVICE_COUPON_RUN_OUT_OF"></a><code>ERROR_DEVICE_COUPON_RUN_OUT_OF</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_DEVICE_COUPON_DECRYPT_ERROR"></a><code>ERROR_DEVICE_COUPON_DECRYPT_ERROR</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_DEVICE_COUPON_NOT_POINT"></a><code>ERROR_DEVICE_COUPON_NOT_POINT</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_DEVICE_NOT_IN_LAN"></a><code>ERROR_DEVICE_NOT_IN_LAN</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_DEVICE_MODULEINFO_FAILED"></a><code>ERROR_DEVICE_MODULEINFO_FAILED</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_MODULE_UPDATE_FAILED"></a><code>ERROR_MODULE_UPDATE_FAILED</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_MODULE_UPDATE_UNKNOW"></a><code>ERROR_MODULE_UPDATE_UNKNOW</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_MODULE_UPDATE_UNFINDFILE"></a><code>ERROR_MODULE_UPDATE_UNFINDFILE</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_MODULE_UPDATE_DOWNLOAD_FAILED"></a><code>ERROR_MODULE_UPDATE_DOWNLOAD_FAILED</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_MODULE_UPDATE_CHECKSUM"></a><code>ERROR_MODULE_UPDATE_CHECKSUM</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_MODULE_UPDATE_TFTP_TIMEOUT"></a><code>ERROR_MODULE_UPDATE_TFTP_TIMEOUT</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_MODULE_UPDATE_WRONG_NAME"></a><code>ERROR_MODULE_UPDATE_WRONG_NAME</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_MODULE_UPDATE_PROTOCOL"></a><code>ERROR_MODULE_UPDATE_PROTOCOL</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_MODULE_UPDATE_INDEX"></a><code>ERROR_MODULE_UPDATE_INDEX</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_MODULE_UPDATE_IMAGEHDR"></a><code>ERROR_MODULE_UPDATE_IMAGEHDR</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_MODULE_RESTART_FAILED"></a><code>ERROR_MODULE_RESTART_FAILED</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_HOME_WIFI_BSSID_INVALID"></a><code>ERROR_HOME_WIFI_BSSID_INVALID</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_INVALID_FAMILY_ID"></a><code>ERROR_INVALID_FAMILY_ID</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_USER_ALREADY_IN_FAMILY"></a><code>ERROR_USER_ALREADY_IN_FAMILY</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_USER_NOT_IN_FAMILY"></a><code>ERROR_USER_NOT_IN_FAMILY</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_INVALID_USER_ID"></a><code>ERROR_INVALID_USER_ID</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_NOT_FAMILY_HEAD"></a><code>ERROR_NOT_FAMILY_HEAD</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_FAMILYMEMBER_GETFAILD"></a><code>ERROR_FAMILYMEMBER_GETFAILD</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_FAMILY_NOT_EXIST"></a><code>ERROR_FAMILY_NOT_EXIST</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_USER_NOT_INVITE_TO_FAMILY"></a><code>ERROR_USER_NOT_INVITE_TO_FAMILY</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_FAMILY_HEAD_CANNOT_QUIT"></a><code>ERROR_FAMILY_HEAD_CANNOT_QUIT</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_CANNOT_MODIFY_CREATE_ROLE"></a><code>ERROR_CANNOT_MODIFY_CREATE_ROLE</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_NONE_CREATER_ERROR"></a><code>ERROR_NONE_CREATER_ERROR</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_CREATOR_ERROR"></a><code>ERROR_CREATOR_ERROR</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_INVITE_REPEAT"></a><code>ERROR_INVITE_REPEAT</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_FAMILYLIST_GETFAILD"></a><code>ERROR_FAMILYLIST_GETFAILD</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_ALEADY_SHARED"></a><code>ERROR_ALEADY_SHARED</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_DEVICE_REPORT"></a><code>ERROR_DEVICE_REPORT</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_DEVICE_STATUS"></a><code>ERROR_DEVICE_STATUS</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_BLE_OTA"></a><code>ERROR_BLE_OTA</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ERROR_B2BDEVICE_ALERT"></a><code>ERROR_B2BDEVICE_ALERT</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="MSDevProtocolCmdError"></a><code>MSDevProtocolCmdError</code></dt>
+<dd>
+
+
+<p>错误码定义 Error code definition</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartErrorCode.h</code>.
+	</p>
+	
+</dd>
+                            
+                        </dl>
+                    </div>
+                    
+
+                    
+                    
+
+                    
+
+                    
+                    <div class="method-subsection declared-in-section">
+                        <h4 class="method-subtitle">Declared In</h4>
+                        <p><code class="declared-in-ref">MSmartErrorCode.h</code></p>
+                    </div>
+                    
+                    
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2017 Midea Smart Technology Co., LTD. All rights reserved. Updated: 2017-09-18</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

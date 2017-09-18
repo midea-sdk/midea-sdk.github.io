@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>MSBleCommonDevice Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">MSmartSDK_V3.1.49 </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Midea Smart Technology Co., LTD.</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/cancelUpdataBle">- cancelUpdataBle</option>
+		
+		<option value="//api/name/getADC:highByte:reserveByte:completion:">- getADC:highByte:reserveByte:completion:</option>
+		
+		<option value="//api/name/getGPIOInput:completion:">- getGPIOInput:completion:</option>
+		
+		<option value="//api/name/getPWMWave:completion:">- getPWMWave:completion:</option>
+		
+		<option value="//api/name/initWithPeripheral:deviceType:completion:">- initWithPeripheral:deviceType:completion:</option>
+		
+		<option value="//api/name/mobileAuthNotify:completion:">- mobileAuthNotify:completion:</option>
+		
+		<option value="//api/name/queryBleVersion:completion:">- queryBleVersion:completion:</option>
+		
+		<option value="//api/name/reboot:completion:">- reboot:completion:</option>
+		
+		<option value="//api/name/reset:completion:">- reset:completion:</option>
+		
+		<option value="//api/name/sendCheckTimeResult:">- sendCheckTimeResult:</option>
+		
+		<option value="//api/name/sendDeviceNotifyAck:">- sendDeviceNotifyAck:</option>
+		
+		<option value="//api/name/sendModuleStartAuthAck:">- sendModuleStartAuthAck:</option>
+		
+		<option value="//api/name/setGPIOOutput:completion:">- setGPIOOutput:completion:</option>
+		
+		<option value="//api/name/startAuthTime:completion:">- startAuthTime:completion:</option>
+		
+		<option value="//api/name/transferData:completion:">- transferData:completion:</option>
+		
+		<option value="//api/name/updateBleByFirmware:start:progress:completion:">- updateBleByFirmware:start:progress:completion:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">MSBleCommonDevice Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>MSBleCommonDevice.h<br />MSBleCommonDevice.m</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>MSBleCommonDevice 是对 MSCBPeripheral 的一个封装，主要提供和 美的家电蓝牙模块 数据交互，
+以及 OTA 在线升级的功能，让开发者更关注上层的数据通信，而不去研究具体蓝牙连接，读取特征值这些细节。</p>
+
+<p>如果是使用 sdk 开发和其它厂家蓝牙模块对接，不能使用该类</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/initWithPeripheral:deviceType:completion:" title="initWithPeripheral:deviceType:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithPeripheral:deviceType:completion:">&ndash;&nbsp;initWithPeripheral:deviceType:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>构造 MSBleCommonDevice 对象</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (id)initWithPeripheral:(MSCBPeripheral *)<em>peripheral</em> deviceType:(UInt8)<em>deviceType</em> completion:(void ( ^ ) ( NSError *error ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>peripheral</code></th>
+						<td><p>使用蓝牙扫描接口扫描到的 MSCBPeripheral 实例</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>deviceType</code></th>
+						<td><p>家电类型</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>蓝牙设备初始化异步回调，error为空表示设备连接成功，可以进行后续业务</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>构造 MSBleCommonDevice 对象</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSBleCommonDevice.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/transferData:completion:" title="transferData:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/transferData:completion:">&ndash;&nbsp;transferData:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>给蓝牙模块发送透传指令</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)transferData:(NSData *)<em>data</em> completion:(void ( ^ ) ( NSError *error , NSData *data ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>data</code></th>
+						<td><p>需要透传的消息数据</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>操作结果异步回调</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>给蓝牙模块发送透传指令</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSBleCommonDevice.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/reboot:completion:" title="reboot:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/reboot:completion:">&ndash;&nbsp;reboot:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>重启蓝牙模块</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)reboot:(UInt8)<em>reserveByte</em> completion:(void ( ^ ) ( NSError *error , NSUInteger result ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>reserveByte</code></th>
+						<td><p>保留字段，目前填 0</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>蓝牙重启后，连接会直接断开，completion 不一定响应，需要监听蓝牙断开事件</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>重启蓝牙模块</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSBleCommonDevice.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/reset:completion:" title="reset:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/reset:completion:">&ndash;&nbsp;reset:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>蓝牙模块恢复出厂设置</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)reset:(UInt8)<em>reserveByte</em> completion:(void ( ^ ) ( NSError *error , NSUInteger result ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>reserveByte</code></th>
+						<td><p>保留字段，目前填 0</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>操作结果异步回调</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>蓝牙模块恢复出厂设置</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSBleCommonDevice.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/queryBleVersion:completion:" title="queryBleVersion:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/queryBleVersion:completion:">&ndash;&nbsp;queryBleVersion:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>查询蓝牙版本信息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)queryBleVersion:(UInt8)<em>reserveByte</em> completion:(void ( ^ ) ( NSError *error , NSDictionary *content ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>reserveByte</code></th>
+						<td><p>保留字段，目前填 0</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>操作结果异步回调</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>查询蓝牙版本信息</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSBleCommonDevice.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/mobileAuthNotify:completion:" title="mobileAuthNotify:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mobileAuthNotify:completion:">&ndash;&nbsp;mobileAuthNotify:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>发送手机鉴权成功通知</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)mobileAuthNotify:(UInt8)<em>reserveByte</em> completion:(void ( ^ ) ( NSError *error ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>reserveByte</code></th>
+						<td><p>保留字段，目前填 0</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>操作结果异步回调</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>发送手机鉴权成功通知</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSBleCommonDevice.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/startAuthTime:completion:" title="startAuthTime:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/startAuthTime:completion:">&ndash;&nbsp;startAuthTime:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>启动鉴权计时</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)startAuthTime:(UInt8)<em>time</em> completion:(void ( ^ ) ( NSError *error , NSData *data ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>time</code></th>
+						<td><p>计时时长</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>操作结果异步回调</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>启动鉴权计时</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSBleCommonDevice.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getADC:highByte:reserveByte:completion:" title="getADC:highByte:reserveByte:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getADC:highByte:reserveByte:completion:">&ndash;&nbsp;getADC:highByte:reserveByte:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取 ADC 参数</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)getADC:(UInt8)<em>lowByte</em> highByte:(UInt8)<em>highByte</em> reserveByte:(UInt16)<em>reserveByte</em> completion:(void ( ^ ) ( NSError *error , NSData *data ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>lowByte</code></th>
+						<td><p>低字节</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>highByte</code></th>
+						<td><p>高字节</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>reserveByte</code></th>
+						<td><p>保留字段，目前填 0</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>操作结果异步回调</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>获取 ADC 参数</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSBleCommonDevice.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getGPIOInput:completion:" title="getGPIOInput:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getGPIOInput:completion:">&ndash;&nbsp;getGPIOInput:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取 GPIO 参数</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)getGPIOInput:(UInt8)<em>flag</em> completion:(void ( ^ ) ( NSError *error , NSUInteger result ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>flag</code></th>
+						<td><p>flag</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>操作结果异步回调</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>获取 GPIO 参数</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSBleCommonDevice.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setGPIOOutput:completion:" title="setGPIOOutput:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setGPIOOutput:completion:">&ndash;&nbsp;setGPIOOutput:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置 GPIO 参数</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setGPIOOutput:(UInt8)<em>flag</em> completion:(void ( ^ ) ( NSError *error , NSUInteger result ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>flag</code></th>
+						<td><p>flag</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>操作结果异步回调</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>设置 GPIO 参数</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSBleCommonDevice.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getPWMWave:completion:" title="getPWMWave:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getPWMWave:completion:">&ndash;&nbsp;getPWMWave:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取 PWM 参数</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)getPWMWave:(UInt8)<em>reserveByte</em> completion:(void ( ^ ) ( NSError *error , NSUInteger result ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>reserveByte</code></th>
+						<td><p>保留字段，目前填 0</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>操作结果异步回调</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>获取 PWM 参数</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSBleCommonDevice.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/sendDeviceNotifyAck:" title="sendDeviceNotifyAck:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sendDeviceNotifyAck:">&ndash;&nbsp;sendDeviceNotifyAck:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>响应家电信息上报</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)sendDeviceNotifyAck:(NSData *)<em>data</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>data</code></th>
+						<td><p>家电响应数据</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>响应家电信息上报</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSBleCommonDevice.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/sendCheckTimeResult:" title="sendCheckTimeResult:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sendCheckTimeResult:">&ndash;&nbsp;sendCheckTimeResult:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>响应蓝牙模块发起的时钟同步</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)sendCheckTimeResult:(NSData *)<em>data</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>date</code></th>
+						<td><p>当前时间</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>响应蓝牙模块发起的时钟同步</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSBleCommonDevice.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/sendModuleStartAuthAck:" title="sendModuleStartAuthAck:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sendModuleStartAuthAck:">&ndash;&nbsp;sendModuleStartAuthAck:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>回应蓝牙模块主动发起的鉴权</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)sendModuleStartAuthAck:(UInt8)<em>reserveByte</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>reserveByte</code></th>
+						<td><p>保留字段，目前填 0</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>回应蓝牙模块主动发起的鉴权</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSBleCommonDevice.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/updateBleByFirmware:start:progress:completion:" title="updateBleByFirmware:start:progress:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/updateBleByFirmware:start:progress:completion:">&ndash;&nbsp;updateBleByFirmware:start:progress:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>蓝牙 OTA 升级</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)updateBleByFirmware:(NSString *)<em>filePath</em> start:(void ( ^ ) ( NSError *error ))<em>start</em> progress:(void ( ^ ) ( NSUInteger percentage ))<em>progress</em> completion:(void ( ^ ) ( NSError *error ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>filePath</code></th>
+						<td><p>蓝牙固件本地路径</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>start</code></th>
+						<td><p>升级开始回调</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>progress</code></th>
+						<td><p>升级进度回调（1 ~ 100）</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>升级完成回调，升级失败，返回 error</p>
+
+<p>说明：蓝牙 OTA 升级完成（或者异常中断）之后，蓝牙模块都会断开连接，此时上层持有的 MSBleCommonDevice
+需要释放，然后重新发现设备，重新创建新的 MSBleCommonDevice 对象。</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>蓝牙 OTA 升级</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSBleCommonDevice.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/cancelUpdataBle" title="cancelUpdataBle"></a>
+	<h3 class="method-title"><code><a href="#//api/name/cancelUpdataBle">&ndash;&nbsp;cancelUpdataBle</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>取消蓝牙 OTA 升级</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)cancelUpdataBle</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>取消蓝牙 OTA 升级</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSBleCommonDevice.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2017 Midea Smart Technology Co., LTD. All rights reserved. Updated: 2017-09-18</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

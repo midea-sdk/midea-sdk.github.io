@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>RemotePushType Constants Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">MSmartSDK_V3.1.49 </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Midea Smart Technology Co., LTD.</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+
+	
+
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">RemotePushType Constants Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Declared in</th>
+	<td>MSmartDefinition.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+
+					
+
+                    
+                    <h3 class="subsubtitle method-title">RemotePushType</h3>
+                    
+					
+					<div class="section section-overview">
+                        <p>推送类型 push type</p>
+
+<ul>
+<li>RemotePushType_User_Login: 用户在其他地方登陆 Account login in another device</li>
+<li>RemotePushType_Device_Status: 家电特殊状态上报 Special Status reporting</li>
+<li>RemotePushType_Family_Delete: 家庭被家长删除 Family was deleted by owner</li>
+<li>RemotePushType_Member_Add: 邀请成员加入家庭 Invite members to join the family</li>
+<li>RemotePushType_Member_Add_Respond: 邀请成员加入家庭响应 The response of invite members to join the family</li>
+<li>RemotePushType_Member_Delete: 删除家庭成员 Remove family members</li>
+<li>RemotePushType_Member_Join_Send: 申请加入家庭 Apply to join the family</li>
+<li>RemotePushType_Member_Join_Response: 申请加入家庭响应 The response of apply to join the family</li>
+<li>RemotePushType_Member_Quite: 成员退出家庭 Members quit the family</li>
+<li>RemotePushType_Device_On: 家电上线推送 Device online</li>
+<li>RemotePushType_Device_Off: 家电离线推送 Device offline</li>
+<li>RemotePushType_Device_Reactivity: 家电再次激活(家电被其他家庭激活) Device actived again</li>
+<li>RemotePushType_Device_UpdateId: 家电更新DID Device update deviceId</li>
+<li>RemotePushType_Device_Add: 添加家电(家长向家庭中添加家电，家庭成员收到此推送) Add device to family by owner</li>
+<li>RemotePushType_Device_Delete: 删除家电(家长删除家庭中的家电，家庭成员收到此推送) Remove device from family by owner</li>
+<li>RemotePushType_Device_Share: 家电分享-主人发送分享 the device share from owner</li>
+<li>RemotePushType_Device_Share_Response: 家电分享响应 the reply of the device share from owner</li>
+<li>RemotePushType_Beg_Device_Share: 请求家电分享 Request device to share</li>
+<li>RemotePushType_Beg_Device_Share_Response: 请求家电分享响应 The reply of request device to share</li>
+<li>RemotePushType_Device_Share_Cancel: 家电主人撤销分享 Cancel the share by owner</li>
+<li>RemotePushType_Device_Owner_Delete: 家电主人删除家电 Delete device by owner</li>
+<li>RemotePushType_Pro2Base: 应用服务器推送(主应用接收)</li>
+<li>RemotePushType_B2BDevice_Alert: b2b警戒推送 B2B Alert</li>
+<li>RemotePushType_B2BDevice_Dealarm: &lt;#RemotePushType_B2BDevice_Dealarm description#></li>
+<li>RemotePushType_Device_Fault: 家电故障 Device fault</li>
+<li>RemotePushType_Gas_Alarm: 警告燃气警告 Gas Alert</li>
+<li>RemotePushType_Device_Update_Request: 设备升级请求 Device update request</li>
+<li>RemotePushType_Device_Update_Feedback: 设备升级结果 The result of the update of device</li>
+<li>RemotePushType_Mcloudbox_Msg: 美居热水器温度到达</li>
+</ul>
+
+					</div>
+					
+					
+                    <div class="section">
+                        <!-- display enum values -->
+                        
+                        <h4 class="method-subtitle">Definition</h4>
+                        <code>typedef NS_ENUM(NSInteger, RemotePushType ) {<br>
+                            
+                            &nbsp;&nbsp; <a href="">RemotePushType_User_Login</a> = 0,<br>
+                            
+                            &nbsp;&nbsp; <a href="">RemotePushType_Device_Status</a> = 1,<br>
+                            
+                            &nbsp;&nbsp; <a href="">RemotePushType_Family_Delete</a> = 2,<br>
+                            
+                            &nbsp;&nbsp; <a href="">RemotePushType_Member_Add</a> = 3,<br>
+                            
+                            &nbsp;&nbsp; <a href="">RemotePushType_Member_Add_Respond</a> = 4,<br>
+                            
+                            &nbsp;&nbsp; <a href="">RemotePushType_Member_Delete</a> = 5,<br>
+                            
+                            &nbsp;&nbsp; <a href="">RemotePushType_Member_Join_Send</a> = 6,<br>
+                            
+                            &nbsp;&nbsp; <a href="">RemotePushType_Member_Join_Response</a> = 7,<br>
+                            
+                            &nbsp;&nbsp; <a href="">RemotePushType_Member_Quite</a> = 8,<br>
+                            
+                            &nbsp;&nbsp; <a href="">RemotePushType_Device_On</a> = 9,<br>
+                            
+                            &nbsp;&nbsp; <a href="">RemotePushType_Device_Off</a> = 10,<br>
+                            
+                            &nbsp;&nbsp; <a href="">RemotePushType_Device_Reactivity</a> = 11,<br>
+                            
+                            &nbsp;&nbsp; <a href="">RemotePushType_Device_UpdateId</a> = 12,<br>
+                            
+                            &nbsp;&nbsp; <a href="">RemotePushType_Device_Add</a> = 13,<br>
+                            
+                            &nbsp;&nbsp; <a href="">RemotePushType_Device_Delete</a> = 14,<br>
+                            
+                            &nbsp;&nbsp; <a href="">RemotePushType_Device_Share</a> = 15,<br>
+                            
+                            &nbsp;&nbsp; <a href="">RemotePushType_Device_Share_Response</a> = 16,<br>
+                            
+                            &nbsp;&nbsp; <a href="">RemotePushType_Beg_Device_Share</a> = 17,<br>
+                            
+                            &nbsp;&nbsp; <a href="">RemotePushType_Beg_Device_Share_Response</a> = 18,<br>
+                            
+                            &nbsp;&nbsp; <a href="">RemotePushType_Device_Share_Cancel</a> = 19,<br>
+                            
+                            &nbsp;&nbsp; <a href="">RemotePushType_Device_Owner_Delete</a> = 20,<br>
+                            
+                            &nbsp;&nbsp; <a href="">RemotePushType_Pro2Base</a> = 21,<br>
+                            
+                            &nbsp;&nbsp; <a href="">RemotePushType_B2BDevice_Alert</a> = 22,<br>
+                            
+                            &nbsp;&nbsp; <a href="">RemotePushType_B2BDevice_Dealarm</a> = 23,<br>
+                            
+                            &nbsp;&nbsp; <a href="">RemotePushType_Device_Fault</a> = 24,<br>
+                            
+                            &nbsp;&nbsp; <a href="">RemotePushType_Gas_Alarm</a> = 25,<br>
+                            
+                            &nbsp;&nbsp; <a href="">RemotePushType_Device_Update_Request</a> = 26,<br>
+                            
+                            &nbsp;&nbsp; <a href="">RemotePushType_Device_Update_Feedback</a> = 27,<br>
+                            
+                            &nbsp;&nbsp; <a href="">RemotePushType_Mcloudbox_Msg</a> = 28,<br>
+                            
+                            };</code>
+                    
+                    </div>
+                    
+                    <div class="section section-methods">
+                        <h4 class="method-subtitle">Constants</h4>
+                        <dl class="termdef">
+                            
+                            <dt><a name="" title="RemotePushType_User_Login"></a><code>RemotePushType_User_Login</code></dt>
+<dd>
+
+
+<p>推送类型 push type</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartDefinition.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="RemotePushType_Device_Status"></a><code>RemotePushType_Device_Status</code></dt>
+<dd>
+
+
+<p>推送类型 push type</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartDefinition.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="RemotePushType_Family_Delete"></a><code>RemotePushType_Family_Delete</code></dt>
+<dd>
+
+
+<p>推送类型 push type</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartDefinition.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="RemotePushType_Member_Add"></a><code>RemotePushType_Member_Add</code></dt>
+<dd>
+
+
+<p>推送类型 push type</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartDefinition.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="RemotePushType_Member_Add_Respond"></a><code>RemotePushType_Member_Add_Respond</code></dt>
+<dd>
+
+
+<p>推送类型 push type</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartDefinition.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="RemotePushType_Member_Delete"></a><code>RemotePushType_Member_Delete</code></dt>
+<dd>
+
+
+<p>推送类型 push type</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartDefinition.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="RemotePushType_Member_Join_Send"></a><code>RemotePushType_Member_Join_Send</code></dt>
+<dd>
+
+
+<p>推送类型 push type</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartDefinition.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="RemotePushType_Member_Join_Response"></a><code>RemotePushType_Member_Join_Response</code></dt>
+<dd>
+
+
+<p>推送类型 push type</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartDefinition.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="RemotePushType_Member_Quite"></a><code>RemotePushType_Member_Quite</code></dt>
+<dd>
+
+
+<p>推送类型 push type</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartDefinition.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="RemotePushType_Device_On"></a><code>RemotePushType_Device_On</code></dt>
+<dd>
+
+
+<p>推送类型 push type</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartDefinition.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="RemotePushType_Device_Off"></a><code>RemotePushType_Device_Off</code></dt>
+<dd>
+
+
+<p>推送类型 push type</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartDefinition.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="RemotePushType_Device_Reactivity"></a><code>RemotePushType_Device_Reactivity</code></dt>
+<dd>
+
+
+<p>推送类型 push type</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartDefinition.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="RemotePushType_Device_UpdateId"></a><code>RemotePushType_Device_UpdateId</code></dt>
+<dd>
+
+
+<p>推送类型 push type</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartDefinition.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="RemotePushType_Device_Add"></a><code>RemotePushType_Device_Add</code></dt>
+<dd>
+
+
+<p>推送类型 push type</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartDefinition.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="RemotePushType_Device_Delete"></a><code>RemotePushType_Device_Delete</code></dt>
+<dd>
+
+
+<p>推送类型 push type</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartDefinition.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="RemotePushType_Device_Share"></a><code>RemotePushType_Device_Share</code></dt>
+<dd>
+
+
+<p>推送类型 push type</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartDefinition.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="RemotePushType_Device_Share_Response"></a><code>RemotePushType_Device_Share_Response</code></dt>
+<dd>
+
+
+<p>推送类型 push type</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartDefinition.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="RemotePushType_Beg_Device_Share"></a><code>RemotePushType_Beg_Device_Share</code></dt>
+<dd>
+
+
+<p>推送类型 push type</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartDefinition.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="RemotePushType_Beg_Device_Share_Response"></a><code>RemotePushType_Beg_Device_Share_Response</code></dt>
+<dd>
+
+
+<p>推送类型 push type</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartDefinition.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="RemotePushType_Device_Share_Cancel"></a><code>RemotePushType_Device_Share_Cancel</code></dt>
+<dd>
+
+
+<p>推送类型 push type</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartDefinition.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="RemotePushType_Device_Owner_Delete"></a><code>RemotePushType_Device_Owner_Delete</code></dt>
+<dd>
+
+
+<p>推送类型 push type</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartDefinition.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="RemotePushType_Pro2Base"></a><code>RemotePushType_Pro2Base</code></dt>
+<dd>
+
+
+<p>推送类型 push type</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartDefinition.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="RemotePushType_B2BDevice_Alert"></a><code>RemotePushType_B2BDevice_Alert</code></dt>
+<dd>
+
+
+<p>推送类型 push type</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartDefinition.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="RemotePushType_B2BDevice_Dealarm"></a><code>RemotePushType_B2BDevice_Dealarm</code></dt>
+<dd>
+
+
+<p>推送类型 push type</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartDefinition.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="RemotePushType_Device_Fault"></a><code>RemotePushType_Device_Fault</code></dt>
+<dd>
+
+
+<p>推送类型 push type</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartDefinition.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="RemotePushType_Gas_Alarm"></a><code>RemotePushType_Gas_Alarm</code></dt>
+<dd>
+
+
+<p>推送类型 push type</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartDefinition.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="RemotePushType_Device_Update_Request"></a><code>RemotePushType_Device_Update_Request</code></dt>
+<dd>
+
+
+<p>推送类型 push type</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartDefinition.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="RemotePushType_Device_Update_Feedback"></a><code>RemotePushType_Device_Update_Feedback</code></dt>
+<dd>
+
+
+<p>推送类型 push type</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartDefinition.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="RemotePushType_Mcloudbox_Msg"></a><code>RemotePushType_Mcloudbox_Msg</code></dt>
+<dd>
+
+
+<p>推送类型 push type</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MSmartDefinition.h</code>.
+	</p>
+	
+</dd>
+                            
+                        </dl>
+                    </div>
+                    
+
+                    
+                    
+
+                    
+
+                    
+                    <div class="method-subsection declared-in-section">
+                        <h4 class="method-subtitle">Declared In</h4>
+                        <p><code class="declared-in-ref">MSmartDefinition.h</code></p>
+                    </div>
+                    
+                    
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2017 Midea Smart Technology Co., LTD. All rights reserved. Updated: 2017-09-18</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>
