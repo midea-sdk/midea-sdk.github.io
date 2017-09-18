@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>MSmartBluetoothManager Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">MSmartSDK_V3.1.49 </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Midea Smart Technology Co., LTD.</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/macFromBinaryToHexString:">+ macFromBinaryToHexString:</option>
+		
+		<option value="//api/name/macFromHexStringToBinary:">+ macFromHexStringToBinary:</option>
+		
+		<option value="//api/name/sharedManager">+ sharedManager</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/connectToPeripheral:options:connectCallBack:disconnectCallBack:">- connectToPeripheral:options:connectCallBack:disconnectCallBack:</option>
+		
+		<option value="//api/name/disconnectAllPeripheralsConnection">- disconnectAllPeripheralsConnection</option>
+		
+		<option value="//api/name/disconnectToPeripheral:disconnectCallBack:">- disconnectToPeripheral:disconnectCallBack:</option>
+		
+		<option value="//api/name/discoverCharacteristicsInService:characteristicUUIDs:discoverCallBack:">- discoverCharacteristicsInService:characteristicUUIDs:discoverCallBack:</option>
+		
+		<option value="//api/name/discoverDescriptorsInCharacteristics:discoverCallBack:">- discoverDescriptorsInCharacteristics:discoverCallBack:</option>
+		
+		<option value="//api/name/discoverServicesOnPeripheral:serviceUUIDs:discoverCallBack:">- discoverServicesOnPeripheral:serviceUUIDs:discoverCallBack:</option>
+		
+		<option value="//api/name/findAllPeripherals">- findAllPeripherals</option>
+		
+		<option value="//api/name/readValueFromCharacteristics:readCallback:">- readValueFromCharacteristics:readCallback:</option>
+		
+		<option value="//api/name/readValueFromDescriptor:readCallback:">- readValueFromDescriptor:readCallback:</option>
+		
+		<option value="//api/name/scanPeripheralsWithServices:options:filterBlock:discoverCallback:">- scanPeripheralsWithServices:options:filterBlock:discoverCallback:</option>
+		
+		<option value="//api/name/setCentralManagerDidUpdateState:">- setCentralManagerDidUpdateState:</option>
+		
+		<option value="//api/name/setNotifyValueForCharacteristics:notifyValue:notifyStateCallback:notifyValueCallback:">- setNotifyValueForCharacteristics:notifyValue:notifyStateCallback:notifyValueCallback:</option>
+		
+		<option value="//api/name/stopScanPeripherals">- stopScanPeripherals</option>
+		
+		<option value="//api/name/writeValueToCharacteristics:data:writeCallback:">- writeValueToCharacteristics:data:writeCallback:</option>
+		
+		<option value="//api/name/writeValueToDescriptor:data:writeCallback:">- writeValueToDescriptor:data:writeCallback:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">MSmartBluetoothManager Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td><a href="../Classes/MSmartBaseManager.html">MSmartBaseManager</a> : NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>MSmartBluetoothManager.h<br />MSmartBluetoothManager.m</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/sharedManager" title="sharedManager"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sharedManager">+&nbsp;sharedManager</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>服务器管理类的单例，考虑到 app 作为 Central 端使用的场景较多，目前不支持 Peripheral 端</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (MSmartBluetoothManager *)sharedManager</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>蓝牙设备管理类的单例</p>
+
+<p>@Example:</p>
+
+<p>MSmartBluetoothManager *manager = <a href="#//api/name/sharedManager">[MSmartBluetoothManager sharedManager]</a>;</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>服务器管理类的单例，考虑到 app 作为 Central 端使用的场景较多，目前不支持 Peripheral 端</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartBluetoothManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setCentralManagerDidUpdateState:" title="setCentralManagerDidUpdateState:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setCentralManagerDidUpdateState:">&ndash;&nbsp;setCentralManagerDidUpdateState:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置回调函数监控系统蓝牙开启状态</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setCentralManagerDidUpdateState:(void ( ^ ) ( MSCBCentralManager *central , CBCentralManagerState state ))<em>updateStateCallBack</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>updateStateCallBack</code></th>
+						<td><p>系统上报蓝牙当前开启状态的 block</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>设置回调函数监控系统蓝牙开启状态</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartBluetoothManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/scanPeripheralsWithServices:options:filterBlock:discoverCallback:" title="scanPeripheralsWithServices:options:filterBlock:discoverCallback:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/scanPeripheralsWithServices:options:filterBlock:discoverCallback:">&ndash;&nbsp;scanPeripheralsWithServices:options:filterBlock:discoverCallback:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>扫描周边蓝牙外设
+如果只想扫描指定类型的外设，比如只扫描小米手环，原理上是根据设备特征码来区分类型，但如果不同厂商特征码有重复，
+只能进一步根据设备名称或者别的参数来细化过滤，只根据 UUID 并不能确定唯一性</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)scanPeripheralsWithServices:(NSArray&lt;CBUUID*&gt; *)<em>serviceUUIDs</em> options:(NSDictionary *)<em>options</em> filterBlock:(BOOL ( ^ ) ( NSString *peripheralName ))<em>filterBlock</em> discoverCallback:(void ( ^ ) ( MSCBPeripheral *peripheral , NSError *error ))<em>discoverCallback</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>serviceUUIDs</code></th>
+						<td><p>UUID 数组，用于扫描携带指定服务的蓝牙外设</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>任选参数，参考 CBCentralManagerConstants.h 文件</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>filterBlock</code></th>
+						<td><p>只扫描外设名字符合某个规范的设备，如只扫描小米设备，可以只扫描 MI 开头的设备</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>discoverCallback</code></th>
+						<td><p>返回当前扫描到的蓝牙外设，该 block 会多次回调，扫描到一个符合条件的设备就回调一次</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>扫描周边蓝牙外设
+如果只想扫描指定类型的外设，比如只扫描小米手环，原理上是根据设备特征码来区分类型，但如果不同厂商特征码有重复，
+只能进一步根据设备名称或者别的参数来细化过滤，只根据 UUID 并不能确定唯一性</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartBluetoothManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/stopScanPeripherals" title="stopScanPeripherals"></a>
+	<h3 class="method-title"><code><a href="#//api/name/stopScanPeripherals">&ndash;&nbsp;stopScanPeripherals</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>停止扫描蓝牙外设，如果已经找到需要连接的外设，就停止扫描，系统并不会自己停止，会一直扫描下去</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)stopScanPeripherals</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>停止扫描蓝牙外设，如果已经找到需要连接的外设，就停止扫描，系统并不会自己停止，会一直扫描下去</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartBluetoothManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/connectToPeripheral:options:connectCallBack:disconnectCallBack:" title="connectToPeripheral:options:connectCallBack:disconnectCallBack:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/connectToPeripheral:options:connectCallBack:disconnectCallBack:">&ndash;&nbsp;connectToPeripheral:options:connectCallBack:disconnectCallBack:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>连接到指定的蓝牙外设</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)connectToPeripheral:(MSCBPeripheral *)<em>peripheral</em> options:(NSDictionary *)<em>options</em> connectCallBack:(void ( ^ ) ( MSCBPeripheral *peripheral , NSError *error ))<em>connectCallBack</em> disconnectCallBack:(void ( ^ ) ( MSCBPeripheral *peripheral , NSError *error ))<em>disconnectCallBack</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>peripheral</code></th>
+						<td><p>之前扫描设备时，返回的 MSCBPeripheral 对象</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>任选参数，参考 CBCentralManagerConstants.h 文件</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>connectCallBack</code></th>
+						<td><p>本次连接是否成功的回调</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>disconnectCallBack</code></th>
+						<td><p>设备连接成功之后，如果后续是设备端主动断开，从这里返回</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>连接到指定的蓝牙外设</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartBluetoothManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/disconnectToPeripheral:disconnectCallBack:" title="disconnectToPeripheral:disconnectCallBack:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/disconnectToPeripheral:disconnectCallBack:">&ndash;&nbsp;disconnectToPeripheral:disconnectCallBack:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>本端主动断开外设</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)disconnectToPeripheral:(MSCBPeripheral *)<em>peripheral</em> disconnectCallBack:(void ( ^ ) ( MSCBPeripheral *peripheral , NSError *error ))<em>disconnectCallBack</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>peripheral</code></th>
+						<td><p>之前扫描设备时，返回的 MSCBPeripheral 对象</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>disconnectCallBack</code></th>
+						<td><p>本次断开是否成功的回调</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>本端主动断开外设</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartBluetoothManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/discoverServicesOnPeripheral:serviceUUIDs:discoverCallBack:" title="discoverServicesOnPeripheral:serviceUUIDs:discoverCallBack:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/discoverServicesOnPeripheral:serviceUUIDs:discoverCallBack:">&ndash;&nbsp;discoverServicesOnPeripheral:serviceUUIDs:discoverCallBack:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>连接外设成功之后，扫描外设的服务</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)discoverServicesOnPeripheral:(MSCBPeripheral *)<em>peripheral</em> serviceUUIDs:(NSArray&lt;CBUUID*&gt; *)<em>serviceUUIDs</em> discoverCallBack:(void ( ^ ) ( NSArray&lt;MSCBService*&gt; *array , NSError *error ))<em>discoverCallBack</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>peripheral</code></th>
+						<td><p>之前扫描设备时，返回的 MSCBPeripheral 对象</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>serviceUUIDs</code></th>
+						<td><p>UUID 数组，用于扫描携带指定的服务</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>discoverCallBack</code></th>
+						<td><p>返回当前扫描到的服务，该 block 会多次回调，扫描到一个符合条件的服务就回调一次</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>连接外设成功之后，扫描外设的服务</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartBluetoothManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/discoverCharacteristicsInService:characteristicUUIDs:discoverCallBack:" title="discoverCharacteristicsInService:characteristicUUIDs:discoverCallBack:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/discoverCharacteristicsInService:characteristicUUIDs:discoverCallBack:">&ndash;&nbsp;discoverCharacteristicsInService:characteristicUUIDs:discoverCallBack:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>连接外设成功之后，扫描某个服务的特征</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)discoverCharacteristicsInService:(MSCBService *)<em>service</em> characteristicUUIDs:(NSArray&lt;CBUUID*&gt; *)<em>characteristicUUIDs</em> discoverCallBack:(void ( ^ ) ( MSCBService *service , NSArray&lt;MSCBCharacteristic*&gt; *chArray , NSError *error ))<em>discoverCallBack</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>service</code></th>
+						<td><p>之前扫描外设服务时，返回的 MSCBService 对象</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>characteristicUUIDs</code></th>
+						<td><p>UUID 数组，用于扫描携带指定的特征</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>discoverCallBack</code></th>
+						<td><p>返回当前扫描到的特征，该 block 会多次回调，扫描到一个符合条件的特征就回调一次</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>连接外设成功之后，扫描某个服务的特征</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartBluetoothManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/discoverDescriptorsInCharacteristics:discoverCallBack:" title="discoverDescriptorsInCharacteristics:discoverCallBack:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/discoverDescriptorsInCharacteristics:discoverCallBack:">&ndash;&nbsp;discoverDescriptorsInCharacteristics:discoverCallBack:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>连接外设成功之后，扫描某个特征的特征描述</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)discoverDescriptorsInCharacteristics:(MSCBCharacteristic *)<em>characteristics</em> discoverCallBack:(void ( ^ ) ( NSArray&lt;MSCBDescriptor*&gt; *array , NSError *error ))<em>discoverCallBack</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>characteristics</code></th>
+						<td><p>之前扫描特征时，返回的 MSCBCharacteristic 对象</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>discoverCallBack</code></th>
+						<td><p>返回当前扫描到的特征描述，该 block 会多次回调，扫描到一个符合条件的特征描述就回调一次</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>连接外设成功之后，扫描某个特征的特征描述</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartBluetoothManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/readValueFromCharacteristics:readCallback:" title="readValueFromCharacteristics:readCallback:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/readValueFromCharacteristics:readCallback:">&ndash;&nbsp;readValueFromCharacteristics:readCallback:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>从特征读取数据, 最大 MTU 目前测试发现在不同系统版本上表现不同</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)readValueFromCharacteristics:(MSCBCharacteristic *)<em>characteristics</em> readCallback:(void ( ^ ) ( MSCBCharacteristic *character , NSData *value , NSError *error ))<em>readCallback</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>characteristics</code></th>
+						<td><p>之前扫描特征时，返回的 MSCBCharacteristic 对象</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>readCallback</code></th>
+						<td><p>返回从当前特征上读取的数据</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>从特征读取数据, 最大 MTU 目前测试发现在不同系统版本上表现不同</p>
+
+<p>在 iOS 7 上，一次读的数据最大只能读到 134 个字节（包括 134），大于 134 的，系统直接截断，导致数据丢失
+在 iOS 9 上，一次读的最大数据只能读到 628 个字节（包括 628），大于 628 的，系统直接截断，导致数据丢失</p>
+
+<p>如果是 iOS 9 和 iOS 7 蓝牙互通，iOS 9 上读取数据范围在（156，628）之间的，iOS 7 系统会自己拆分为 157 字节一个包后，
+再发往 iOS 9 这边，所以 iOS 7 这边会收到多次读请求，但请求里的 offset 不同，所以 iOS 7 这边需要根据 offset 来计算
+偏移并多次发送数据，iOS 9 那边并不会多次收到读数据回调，只会收到一次回调</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartBluetoothManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/writeValueToCharacteristics:data:writeCallback:" title="writeValueToCharacteristics:data:writeCallback:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/writeValueToCharacteristics:data:writeCallback:">&ndash;&nbsp;writeValueToCharacteristics:data:writeCallback:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>往特征发送数据，最大 MTU 目前测试发现在不同系统版本上表现不同</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)writeValueToCharacteristics:(MSCBCharacteristic *)<em>characteristics</em> data:(NSData *)<em>data</em> writeCallback:(void ( ^ ) ( MSCBCharacteristic *character , NSError *error ))<em>writeCallback</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>characteristics</code></th>
+						<td><p>之前扫描特征时，返回的 MSCBCharacteristic 对象</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>data</code></th>
+						<td><p>需要发送的数据</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>writeCallback</code></th>
+						<td><p>本次数据是否发送成功的回调，传入 nil 表示当前写操作，不需要对端响应</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>往特征发送数据，最大 MTU 目前测试发现在不同系统版本上表现不同</p>
+
+<p>在 iOS 7 上，一次写的数据最大只能写 155 个字节（包括 155），大于 155 的，系统直接返回错误 Unknown error
+在 iOS 9 上，一次写的最大数据只能写 512 个字节（包括 512），大于 512 的，系统直接返回错误 Unknown error</p>
+
+<p>如果是 iOS 9 和 iOS 7 蓝牙互通，iOS 9 上发送数据范围在（155，512）之间的，iOS 7 系统收到之后会自己拆分为 153 字节
+一个包再报给上层，所以 iOS 7 这边会收到多次写请求，但请求里的 offset 不同，iOS 7 这边需要根据 offset 来合并数据</p>
+
+<p>实际测试蓝牙传输速度:两个iPhone手机，一个做中心，一个做外设，平均传输速度只有 1.8k/s</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartBluetoothManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setNotifyValueForCharacteristics:notifyValue:notifyStateCallback:notifyValueCallback:" title="setNotifyValueForCharacteristics:notifyValue:notifyStateCallback:notifyValueCallback:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setNotifyValueForCharacteristics:notifyValue:notifyStateCallback:notifyValueCallback:">&ndash;&nbsp;setNotifyValueForCharacteristics:notifyValue:notifyStateCallback:notifyValueCallback:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>订阅某个特征的数据，后续该特征有数据更新时，会主动通知本端</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setNotifyValueForCharacteristics:(MSCBCharacteristic *)<em>characteristics</em> notifyValue:(BOOL)<em>notifyValue</em> notifyStateCallback:(void ( ^ ) ( MSCBCharacteristic *character , NSError *error ))<em>notifyStateCallback</em> notifyValueCallback:(void ( ^ ) ( MSCBCharacteristic *character , NSData *value , NSError *error ))<em>notifyValueCallback</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>characteristics</code></th>
+						<td><p>之前扫描特征时，返回的 MSCBCharacteristic 对象</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>notifyValue</code></th>
+						<td><p>YES:开启订阅，NO:关闭订阅</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>notifyStateCallback</code></th>
+						<td><p>本次发起订阅的操作是否成功的回调</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>notifyValueCallback</code></th>
+						<td><p>订阅成功之后，后续数据更新通知的回调</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>订阅某个特征的数据，后续该特征有数据更新时，会主动通知本端</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartBluetoothManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/readValueFromDescriptor:readCallback:" title="readValueFromDescriptor:readCallback:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/readValueFromDescriptor:readCallback:">&ndash;&nbsp;readValueFromDescriptor:readCallback:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>从特征读取数据</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)readValueFromDescriptor:(MSCBDescriptor *)<em>descriptor</em> readCallback:(void ( ^ ) ( MSCBDescriptor *descrip , NSData *value , NSError *error ))<em>readCallback</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>descriptor</code></th>
+						<td><p>之前扫描特征描述时，返回的 MSCBDescriptor 对象</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>readCallback</code></th>
+						<td><p>返回从当前特征描述上读取的数据</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>从特征读取数据</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartBluetoothManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/writeValueToDescriptor:data:writeCallback:" title="writeValueToDescriptor:data:writeCallback:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/writeValueToDescriptor:data:writeCallback:">&ndash;&nbsp;writeValueToDescriptor:data:writeCallback:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>往特征描述发送数据</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)writeValueToDescriptor:(MSCBDescriptor *)<em>descriptor</em> data:(NSData *)<em>data</em> writeCallback:(void ( ^ ) ( MSCBDescriptor *descrip , NSError *error ))<em>writeCallback</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>descriptor</code></th>
+						<td><p>之前扫描特征描述时，返回的 MSCBDescriptor 对象</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>data</code></th>
+						<td><p>需要发送的数据</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>writeCallback</code></th>
+						<td><p>本次数据是否发送成功的回调, 传入 nil 表示当前写操作，不需要对端响应</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>往特征描述发送数据</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartBluetoothManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/disconnectAllPeripheralsConnection" title="disconnectAllPeripheralsConnection"></a>
+	<h3 class="method-title"><code><a href="#//api/name/disconnectAllPeripheralsConnection">&ndash;&nbsp;disconnectAllPeripheralsConnection</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>断开所有目前已经连接上的外设</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)disconnectAllPeripheralsConnection</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>断开所有目前已经连接上的外设</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartBluetoothManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/findAllPeripherals" title="findAllPeripherals"></a>
+	<h3 class="method-title"><code><a href="#//api/name/findAllPeripherals">&ndash;&nbsp;findAllPeripherals</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取当前连接中的设备</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSArray&lt;MSCBPeripheral*&gt; *)findAllPeripherals</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>当前连接中的设备 MSCBPeripheral 对象数组</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>获取当前连接中的设备</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartBluetoothManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/macFromHexStringToBinary:" title="macFromHexStringToBinary:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/macFromHexStringToBinary:">+&nbsp;macFromHexStringToBinary:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>mac地址格式转换 C8:0F:10:0B:FF:F5 &mdash;> <c80f100bfff5></p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSData *)macFromHexStringToBinary:(NSString *)<em>string</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>string</code></th>
+						<td><p>mac地址</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>mac地址格式转换的NSData</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>mac地址格式转换 C8:0F:10:0B:FF:F5 &mdash;> <c80f100bfff5></p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartBluetoothManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/macFromBinaryToHexString:" title="macFromBinaryToHexString:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/macFromBinaryToHexString:">+&nbsp;macFromBinaryToHexString:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>mac地址格式转换 <c80f100bfff5> &mdash;> C8:0F:10:0B:FF:F5</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSString *)macFromBinaryToHexString:(NSData *)<em>data</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>data</code></th>
+						<td><p>mac地址</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>mac地址格式转换的NSData</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>mac地址格式转换 <c80f100bfff5> &mdash;> C8:0F:10:0B:FF:F5</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartBluetoothManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2017 Midea Smart Technology Co., LTD. All rights reserved. Updated: 2017-09-18</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,4361 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>MSmartDeviceManager Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">MSmartSDK_V3.1.49 </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Midea Smart Technology Co., LTD.</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/sharedManager">+ sharedManager</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/activeDeviceWithDeviceSN:familyId:completion:">- activeDeviceWithDeviceSN:familyId:completion:</option>
+		
+		<option value="//api/name/activeDeviceWithDeviceSN:familyId:extraDic:completion:">- activeDeviceWithDeviceSN:familyId:extraDic:completion:</option>
+		
+		<option value="//api/name/activeDeviceWithQRCode:familyId:completion:">- activeDeviceWithQRCode:familyId:completion:</option>
+		
+		<option value="//api/name/add2GDeviceByQrCode:familyId:completion:">- add2GDeviceByQrCode:familyId:completion:</option>
+		
+		<option value="//api/name/addDeviceWithSSID:completion:">- addDeviceWithSSID:completion:</option>
+		
+		<option value="//api/name/bindDeviceWithDeviceSN:andTsn:completion:">- bindDeviceWithDeviceSN:andTsn:completion:</option>
+		
+		<option value="//api/name/bindDeviceWithWifi:password:WiFiBSsid:deviceName:tsn:completion:">- bindDeviceWithWifi:password:WiFiBSsid:deviceName:tsn:completion:</option>
+		
+		<option value="//api/name/cancelShareDeviceWithDeviceID:toUserId:completion:">- cancelShareDeviceWithDeviceID:toUserId:completion:</option>
+		
+		<option value="//api/name/connectDeviceWithSSID:completion:">- connectDeviceWithSSID:completion:</option>
+		
+		<option value="//api/name/controlDeviceWithId:operationDic:completion:">- controlDeviceWithId:operationDic:completion:</option>
+		
+		<option value="//api/name/decryptSNWithQRCode:completion:">- decryptSNWithQRCode:completion:</option>
+		
+		<option value="//api/name/deleteDeviceWithDeviceID:completion:">- deleteDeviceWithDeviceID:completion:</option>
+		
+		<option value="//api/name/deviceWifiModuleUpdateWithDeviceId:progress:completion:">- deviceWifiModuleUpdateWithDeviceId:progress:completion:</option>
+		
+		<option value="//api/name/deviceWifiModuleVersionInfoWithDeviceSsid:completion:">- deviceWifiModuleVersionInfoWithDeviceSsid:completion:</option>
+		
+		<option value="//api/name/enableSSIDFormatWithFormatArray:">- enableSSIDFormatWithFormatArray:</option>
+		
+		<option value="//api/name/getConfigureTypeByQrcode:completion:">- getConfigureTypeByQrcode:completion:</option>
+		
+		<option value="//api/name/getCurrentSSID">- getCurrentSSID</option>
+		
+		<option value="//api/name/getDeviceInfoAndBindInfoWithDeviceId:completion:">- getDeviceInfoAndBindInfoWithDeviceId:completion:</option>
+		
+		<option value="//api/name/getDeviceInfoArray:">- getDeviceInfoArray:</option>
+		
+		<option value="//api/name/getDeviceInfoWithSSID:">- getDeviceInfoWithSSID:</option>
+		
+		<option value="//api/name/getDeviceListWithFamilyId:completion:">- getDeviceListWithFamilyId:completion:</option>
+		
+		<option value="//api/name/getDeviceNameWithSSID:">- getDeviceNameWithSSID:</option>
+		
+		<option value="//api/name/getDeviceSubTypeWithDeviceSSID:completion:">- getDeviceSubTypeWithDeviceSSID:completion:</option>
+		
+		<option value="//api/name/getDeviceTypeNameWithDeviceType:">- getDeviceTypeNameWithDeviceType:</option>
+		
+		<option value="//api/name/getMyFamilysDeviceListWithCompletion:">- getMyFamilysDeviceListWithCompletion:</option>
+		
+		<option value="//api/name/getSNfromQRCode:">- getSNfromQRCode:</option>
+		
+		<option value="//api/name/getSSIDfromQRCode:">- getSSIDfromQRCode:</option>
+		
+		<option value="//api/name/getShareUserListByDeviceIds:completion:">- getShareUserListByDeviceIds:completion:</option>
+		
+		<option value="//api/name/getWifiList:">- getWifiList:</option>
+		
+		<option value="//api/name/isDesignatedVersion:">- isDesignatedVersion:</option>
+		
+		<option value="//api/name/isQRCodeValid:">- isQRCodeValid:</option>
+		
+		<option value="//api/name/modifyDeviceInformationWithDeviceId:modifiedName:modifiedDeviceDescripiton:completion:">- modifyDeviceInformationWithDeviceId:modifiedName:modifiedDeviceDescripiton:completion:</option>
+		
+		<option value="//api/name/modifyDeviceNameWithDeviceId:deviceName:completion:">- modifyDeviceNameWithDeviceId:deviceName:completion:</option>
+		
+		<option value="//api/name/queryDeviceOTAState:completion:">- queryDeviceOTAState:completion:</option>
+		
+		<option value="//api/name/queryDeviceWithId:completion:">- queryDeviceWithId:completion:</option>
+		
+		<option value="//api/name/requestDeviceShareResponseWithDeviceId:andUserId:andAccept:completion:">- requestDeviceShareResponseWithDeviceId:andUserId:andAccept:completion:</option>
+		
+		<option value="//api/name/requestDeviceShareWithDeviceId:andUserId:completion:">- requestDeviceShareWithDeviceId:andUserId:completion:</option>
+		
+		<option value="//api/name/responseToShareDeviceWithDeviceID:account:accept:completion:">- responseToShareDeviceWithDeviceID:account:accept:completion:</option>
+		
+		<option value="//api/name/restartModuleWithDeviceId:completion:">- restartModuleWithDeviceId:completion:</option>
+		
+		<option value="//api/name/sendMSCPacketWithHomeSSID:password:key:">- sendMSCPacketWithHomeSSID:password:key:</option>
+		
+		<option value="//api/name/shareDeviceWithDeviceID:toUserId:completion:">- shareDeviceWithDeviceID:toUserId:completion:</option>
+		
+		<option value="//api/name/startConfigureJDDeviceWithWifi:password:securityType:deviceSSID:tsn:completion:">- startConfigureJDDeviceWithWifi:password:securityType:deviceSSID:tsn:completion:</option>
+		
+		<option value="//api/name/startDeviceOTAState:completion:">- startDeviceOTAState:completion:</option>
+		
+		<option value="//api/name/startNewSendMSCWithDeviceType:homeSSID:password:tsn:extension:key:completion:">- startNewSendMSCWithDeviceType:homeSSID:password:tsn:extension:key:completion:</option>
+		
+		<option value="//api/name/startScanDeviceInWifi:">- startScanDeviceInWifi:</option>
+		
+		<option value="//api/name/startSendMSCWithDeviceSSID:homeSSID:password:tsn:key:completion:">- startSendMSCWithDeviceSSID:homeSSID:password:tsn:key:completion:</option>
+		
+		<option value="//api/name/stopAddDeviceBySSID:">- stopAddDeviceBySSID:</option>
+		
+		<option value="//api/name/stopBindDeviceWithCompletion:">- stopBindDeviceWithCompletion:</option>
+		
+		<option value="//api/name/stopConfigureJDDeviceWithCompletion:">- stopConfigureJDDeviceWithCompletion:</option>
+		
+		<option value="//api/name/stopScanDeviceInWifi">- stopScanDeviceInWifi</option>
+		
+		<option value="//api/name/stopSendMSCPacket">- stopSendMSCPacket</option>
+		
+		<option value="//api/name/stopSendMSCWithCompletion:">- stopSendMSCWithCompletion:</option>
+		
+		<option value="//api/name/unBindDeviceWithDeviceID:completion:">- unBindDeviceWithDeviceID:completion:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">MSmartDeviceManager Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td><a href="../Classes/MSmartBaseManager.html">MSmartBaseManager</a> : NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>MSmartDeviceManager.h<br />MSmartDeviceManager.m</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						<h2 class="task-title">Other Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/sharedManager" title="sharedManager"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sharedManager">+&nbsp;sharedManager</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The singleton of appliance manager.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (MSmartDeviceManager *)sharedManager</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>the singleton of appliance manager</p>
+
+<p><strong>Example:</strong></p>
+
+<p>MSmartDeviceManager* manager = <a href="#//api/name/sharedManager">[MSmartDeviceManager sharedManager]</a>;</p>
+
+<p>[manager MSmartTestModel:@&ldquo;join us!&rdquo;];</p>
+			</div>
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland/overseas)  (group/single user)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The singleton of appliance manager.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartDeviceManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getCurrentSSID" title="getCurrentSSID"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getCurrentSSID">&ndash;&nbsp;getCurrentSSID</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get the SSID of the wifi network connected</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSString *)getCurrentSSID</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>connected wifi SSID.</p>
+			</div>
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland/overseas)  (group/single user)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get the SSID of the wifi network connected</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartDeviceManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getConfigureTypeByQrcode:completion:" title="getConfigureTypeByQrcode:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getConfigureTypeByQrcode:completion:">&ndash;&nbsp;getConfigureTypeByQrcode:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>step 1. get the network configuration mode from qrcode string</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)getConfigureTypeByQrcode:(NSString *)<em>qrcode</em> completion:(void ( ^ ) ( NSError *error , MSmartConfigType configType ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>qrcode</code></th>
+						<td><p>qrcode string</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>Async call</p>
+
+<ul>
+<li>error.code contains: 0 succeed >0 failed, detailed definition in <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> or error.localizedDescription</li>
+<li>configType：network config mode,detailed definition in <a href="../Constants/MSmartConfigType.html">MSmartConfigType</a> of MSmartDefinition.h</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland/overseas)  (group/single user)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>step 1. get the network configuration mode from qrcode string</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartDeviceManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/connectDeviceWithSSID:completion:" title="connectDeviceWithSSID:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/connectDeviceWithSSID:completion:">&ndash;&nbsp;connectDeviceWithSSID:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>step 2.1.1 connect to an appliance with <a href="../Constants/MSmartConfigType.html">MSmartConfigType</a> equal to MSmartConfigAP or MSmartConfigJD. You can find the <a href="../Constants/MSmartConfigType.html">MSmartConfigType</a> in th callback of API &lsquo;- (void)getConfigureTypeByQrcode:(NSString <em>)qrcode
+completion:(void (^)(NSError </em>error,<a href="../Constants/MSmartConfigType.html">MSmartConfigType</a> configType))completion&rsquo;.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)connectDeviceWithSSID:(NSString *)<em>ssid</em> completion:(void ( ^ ) ( NSError *error ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>ssid</code></th>
+						<td><p>the SSID of appliance AP</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>Async call</p>
+
+<ul>
+<li>error.code contains: 0 succeed >0 failed, detailed definition in <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> or error.localizedDescription</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland/overseas)  (group/single user)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>step 2.1.1 connect to an appliance with <a href="../Constants/MSmartConfigType.html">MSmartConfigType</a> equal to MSmartConfigAP or MSmartConfigJD. You can find the <a href="../Constants/MSmartConfigType.html">MSmartConfigType</a> in th callback of API &lsquo;- (void)getConfigureTypeByQrcode:(NSString <em>)qrcode
+completion:(void (^)(NSError </em>error,<a href="../Constants/MSmartConfigType.html">MSmartConfigType</a> configType))completion&rsquo;.</p>
+
+<p><strong>Note:</strong> use tips:</p>
+
+<ol>
+<li> new appliance will be in AP(access point) mode.</li>
+<li> user need to connect to the appliance AP in the system setting manual if they are using iOS.</li>
+</ol>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartDeviceManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getWifiList:" title="getWifiList:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getWifiList:">&ndash;&nbsp;getWifiList:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>step 2.1.2 get available wifi list around the appliance.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)getWifiList:(void ( ^ ) ( NSError *error , NSArray *array ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>Async call</p>
+
+<ul>
+<li>error.code contains: 0 succeed >0 failed, detailed definition in <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> or error.localizedDescription</li>
+<li><p>array:wifi list array</p>
+
+<ul>
+<li>miType = 0; // <a href="../Constants/WifiSecurityType.html">WifiSecurityType</a></li>
+<li>ssid = MideaTestNetwork; //wifi SSID</li>
+</ul>
+</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland/overseas)  (group/single user)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>step 2.1.2 get available wifi list around the appliance.</p><div class="note"><p><strong>Note:</strong> this API can only called after the cell phone connect to an appliance AP.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartDeviceManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/bindDeviceWithWifi:password:WiFiBSsid:deviceName:tsn:completion:" title="bindDeviceWithWifi:password:WiFiBSsid:deviceName:tsn:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/bindDeviceWithWifi:password:WiFiBSsid:deviceName:tsn:completion:">&ndash;&nbsp;bindDeviceWithWifi:password:WiFiBSsid:deviceName:tsn:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>step 2.2.1 If the <a href="../Constants/MSmartConfigType.html">MSmartConfigType</a> equal to MSmartConfigAP, you can use this API to make the appliance connect to a specific network.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)bindDeviceWithWifi:(NSString *)<em>homeSSID</em> password:(NSString *)<em>password</em> WiFiBSsid:(NSString *)<em>bssid</em> deviceName:(NSString *)<em>deviceName</em> tsn:(NSString *)<em>tsn</em> completion:(void ( ^ ) ( NSError *error , NSDictionary *dict ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>homeSSID</code></th>
+						<td><p>SSID of the wifi router</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>password</code></th>
+						<td><p>password of the wifi router</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>bssid</code></th>
+						<td><p>BSSID of the wifi router：31:63:6B:D9:2F:45，it can be 00:00:00:00:00:00 if you can&rsquo;t get the BSSID.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>deviceName</code></th>
+						<td><p>the name of the device, can be nil@&ldquo;&rdquo;</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>tsn</code></th>
+						<td><p>can be nil or empty</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>Async call</p>
+
+<ul>
+<li>error.code contains: 0 succeed >0 failed, detailed definition in <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> or error.localizedDescription</li>
+<li>dict：the information of the appliance.If the &ldquo;isActivity&rdquo; is 1 , that means the appliace is already activated.</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland/overseas)  (group/single user)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>step 2.2.1 If the <a href="../Constants/MSmartConfigType.html">MSmartConfigType</a> equal to MSmartConfigAP, you can use this API to make the appliance connect to a specific network.</p><div class="note"><p><strong>Note:</strong> there is a 90 seconds timeout. tip:wifi module is appliance can not support 5G wifi network.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartDeviceManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/stopBindDeviceWithCompletion:" title="stopBindDeviceWithCompletion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/stopBindDeviceWithCompletion:">&ndash;&nbsp;stopBindDeviceWithCompletion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>stop wifi connecting</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)stopBindDeviceWithCompletion:(void ( ^ ) ( NSError *error ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>Async call</p>
+
+<ul>
+<li>error.code contains: 0 succeed >0 failed, detailed definition in <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> or error.localizedDescription</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland/overseas)  (group/single user)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>stop wifi connecting</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartDeviceManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/startConfigureJDDeviceWithWifi:password:securityType:deviceSSID:tsn:completion:" title="startConfigureJDDeviceWithWifi:password:securityType:deviceSSID:tsn:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/startConfigureJDDeviceWithWifi:password:securityType:deviceSSID:tsn:completion:">&ndash;&nbsp;startConfigureJDDeviceWithWifi:password:securityType:deviceSSID:tsn:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>step 2.2.2 use this API if the <a href="../Constants/MSmartConfigType.html">MSmartConfigType</a> of step 1 is MSmartConfigJD. bind the appliance to a specific wifi network. there is no timeout, you need to call stopConfigureJDDevice to stop the connecting.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)startConfigureJDDeviceWithWifi:(NSString *)<em>homeSSID</em> password:(NSString *)<em>password</em> securityType:(WifiSecurityType)<em>securityType</em> deviceSSID:(NSString *)<em>deviceSSID</em> tsn:(NSString *)<em>tsn</em> completion:(void ( ^ ) ( NSError *error , NSDictionary *dict ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>homeSSID</code></th>
+						<td><p>SSID of wifi router</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>password</code></th>
+						<td><p>the password of wifi router</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>securityType</code></th>
+						<td><p>wifi encryption mode. defined in <a href="../Constants/WifiSecurityType.html">WifiSecurityType</a>,please use MDWifiSecurityNone if it is a open network</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>deviceSSID</code></th>
+						<td><p>the Appliance SSID</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>tsn</code></th>
+						<td><p>can be nil or empty</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>Async call</p>
+
+<ul>
+<li>error.code contains: 0 succeed >0 failed, detailed definition in <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> or error.localizedDescription</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland)  (group/single user)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>step 2.2.2 use this API if the <a href="../Constants/MSmartConfigType.html">MSmartConfigType</a> of step 1 is MSmartConfigJD. bind the appliance to a specific wifi network. there is no timeout, you need to call stopConfigureJDDevice to stop the connecting.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartDeviceManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/stopConfigureJDDeviceWithCompletion:" title="stopConfigureJDDeviceWithCompletion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/stopConfigureJDDeviceWithCompletion:">&ndash;&nbsp;stopConfigureJDDeviceWithCompletion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>step 2.2.3 it can be use with startConfigureJDDeviceWithWifi</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)stopConfigureJDDeviceWithCompletion:(void ( ^ ) ( NSError *error ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>Async call</p>
+
+<ul>
+<li>error.code contains: 0 succeed >0 failed, detailed definition in <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> or error.localizedDescription</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland)  (group/single user)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>step 2.2.3 it can be use with startConfigureJDDeviceWithWifi</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartDeviceManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/startSendMSCWithDeviceSSID:homeSSID:password:tsn:key:completion:" title="startSendMSCWithDeviceSSID:homeSSID:password:tsn:key:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/startSendMSCWithDeviceSSID:homeSSID:password:tsn:key:completion:">&ndash;&nbsp;startSendMSCWithDeviceSSID:homeSSID:password:tsn:key:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>step 2.3.1 This API can be called if the <a href="../Constants/MSmartConfigType.html">MSmartConfigType</a> of step 1 is MSmartConfigMSC. Once this api is called, it will not stop until get a calback or manually stop it.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)startSendMSCWithDeviceSSID:(NSString *)<em>deviceSSID</em> homeSSID:(NSString *)<em>homeSSID</em> password:(NSString *)<em>password</em> tsn:(NSString *)<em>tsn</em> key:(NSString *)<em>key</em> completion:(void ( ^ ) ( NSError *error , NSDictionary *dict ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>deviceSSID</code></th>
+						<td><p>appliance SSID</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>homeSSID</code></th>
+						<td><p>SSID of wifi router</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>password</code></th>
+						<td><p>password of wifi router</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>tsn</code></th>
+						<td><p>sn from the qrcode, can be nil or empty</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>key</code></th>
+						<td><p>reserve, can be nil</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>Async call</p>
+
+<ul>
+<li>error.code contains: 0 succeed >0 failed, detailed definition in <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> or error.localizedDescription</li>
+<li><p>dict:appliance info</p>
+
+<ul>
+<li>@&ldquo;deviceSn&rdquo;:sn,                 //sn</li>
+<li>@&ldquo;deviceSsid&rdquo;:ssid,             //ssid</li>
+<li>@&ldquo;deviceType&rdquo;:typeStr,          //appliance type</li>
+<li>@&ldquo;identifyTime&rdquo;:identifyTime,   //identify time(minutes)</li>
+<li>@&ldquo;identifyType&rdquo;:identifyType    //identify mode，0&ndash;device identify，1&ndash;SDK</li>
+</ul>
+</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland/overseas)  (group/single user)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>step 2.3.1 This API can be called if the <a href="../Constants/MSmartConfigType.html">MSmartConfigType</a> of step 1 is MSmartConfigMSC. Once this api is called, it will not stop until get a calback or manually stop it.</p>
+
+<p><strong>Note:</strong> use tips:</p>
+
+<ol>
+<li> new appliance will be in SmartConfig mode.</li>
+<li> app will connect wifi router</li>
+</ol>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartDeviceManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/stopSendMSCWithCompletion:" title="stopSendMSCWithCompletion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/stopSendMSCWithCompletion:">&ndash;&nbsp;stopSendMSCWithCompletion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>step 2.3.2 this api is work with startSendMSCWithDeviceSSID.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)stopSendMSCWithCompletion:(void ( ^ ) ( NSError *error ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>Async call</p>
+
+<ul>
+<li>error.code contains: 0 succeed >0 failed, detailed definition in <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> or error.localizedDescription</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland/overseas)  (group/single user)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>step 2.3.2 this api is work with startSendMSCWithDeviceSSID.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartDeviceManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/sendMSCPacketWithHomeSSID:password:key:" title="sendMSCPacketWithHomeSSID:password:key:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sendMSCPacketWithHomeSSID:password:key:">&ndash;&nbsp;sendMSCPacketWithHomeSSID:password:key:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Once MSCconfig is called, it will not stop until get a calback or manually stop it.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)sendMSCPacketWithHomeSSID:(NSString *)<em>homeSSID</em> password:(NSString *)<em>password</em> key:(NSString *)<em>key</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>homeSSID</code></th>
+						<td><p>SSID of wifi router</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>password</code></th>
+						<td><p>password of wifi router</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>key</code></th>
+						<td><p>reserve, can be nil</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland/overseas)  (group/single user)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Once MSCconfig is called, it will not stop until get a calback or manually stop it.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartDeviceManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/stopSendMSCPacket" title="stopSendMSCPacket"></a>
+	<h3 class="method-title"><code><a href="#//api/name/stopSendMSCPacket">&ndash;&nbsp;stopSendMSCPacket</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>this api is work with sendMSCPacketWithHomeSSID.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)stopSendMSCPacket</code></div>
+
+		    
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland/overseas)  (group/single user)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>this api is work with sendMSCPacketWithHomeSSID.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartDeviceManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/startNewSendMSCWithDeviceType:homeSSID:password:tsn:extension:key:completion:" title="startNewSendMSCWithDeviceType:homeSSID:password:tsn:extension:key:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/startNewSendMSCWithDeviceType:homeSSID:password:tsn:extension:key:completion:">&ndash;&nbsp;startNewSendMSCWithDeviceType:homeSSID:password:tsn:extension:key:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>step 2.3.1 This API can be called if the <a href="../Constants/MSmartConfigType.html">MSmartConfigType</a> of step 1 is MSmartConfigMSC_OneType. Once this api is called, it will not stop until get a calback or manually stop it.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)startNewSendMSCWithDeviceType:(NSString *)<em>deviceType</em> homeSSID:(NSString *)<em>homeSSID</em> password:(NSString *)<em>password</em> tsn:(NSString *)<em>tsn</em> extension:(NSString *)<em>extension</em> key:(NSString *)<em>key</em> completion:(void ( ^ ) ( NSError *err , NSDictionary *dict ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>deviceType</code></th>
+						<td><p>Appliance type. eg:0xAC AC</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>homeSSID</code></th>
+						<td><p>SSID of wifi router</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>password</code></th>
+						<td><p>password of wifi router</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>tsn</code></th>
+						<td><p>tsn from qrcode, can be nil</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>extension</code></th>
+						<td><p>extension,can be nil</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>key</code></th>
+						<td><p>reserve,can be nil</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>Async call</p>
+
+<ul>
+<li>error.code contains: 0 succeed >0 failed, detailed definition in <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> or error.localizedDescription</li>
+<li>dict:the information of appliance</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland/overseas)  (group/single user)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>step 2.3.1 This API can be called if the <a href="../Constants/MSmartConfigType.html">MSmartConfigType</a> of step 1 is MSmartConfigMSC_OneType. Once this api is called, it will not stop until get a calback or manually stop it.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartDeviceManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getDeviceSubTypeWithDeviceSSID:completion:" title="getDeviceSubTypeWithDeviceSSID:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getDeviceSubTypeWithDeviceSSID:completion:">&ndash;&nbsp;getDeviceSubTypeWithDeviceSSID:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get subtype of appliance</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)getDeviceSubTypeWithDeviceSSID:(NSString *)<em>deviceSSID</em> completion:(void ( ^ ) ( NSError *error , NSString *subtype ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>deviceSSID</code></th>
+						<td><p>SSID of appliance</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>Async call</p>
+
+<ul>
+<li>error.code contains: 0 succeed >0 failed, detailed definition in <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> or error.localizedDescription</li>
+<li>subtype:subtype of appliance</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland/overseas)  (group/single user)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get subtype of appliance</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartDeviceManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/startScanDeviceInWifi:" title="startScanDeviceInWifi:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/startScanDeviceInWifi:">&ndash;&nbsp;startScanDeviceInWifi:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Scan appliances in current wifi network. this API must be call before any appliace related API.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)startScanDeviceInWifi:(void ( ^ ) ( NSError *error , NSArray *deviceList , NSArray *configDeviceList ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>Async call</p>
+
+<ul>
+<li>error.code contains: 0 succeed >0 failed, detailed definition in <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> or error.localizedDescription</li>
+<li>configDeviceList：added devices</li>
+<li><p>deviceList: configured but not added device</p>
+
+<ul>
+<li>deviceId = 17592196255167;</li>
+<li>deviceName = &ldquo;\U7a7a\U8c030009&rdquo;;</li>
+<li>deviceSn = 000000D110001234515B032B00090000;</li>
+<li>deviceSsid = &ldquo;midea_ac_0009&rdquo;;</li>
+<li>identifyTime = 0;</li>
+<li>identifyType = &ldquo;&rdquo;;</li>
+</ul>
+</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland/overseas)  (group/single user)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Scan appliances in current wifi network. this API must be call before any appliace related API.</p>
+
+<p><strong>Note:</strong> Contain two kinds of appliances:</p>
+
+<ol>
+<li> configured device: this appliance is already connect to the router, but it is not added to SDK.</li>
+<li> added device: this appliance is already stored in the SDK Database.</li>
+</ol>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartDeviceManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/stopScanDeviceInWifi" title="stopScanDeviceInWifi"></a>
+	<h3 class="method-title"><code><a href="#//api/name/stopScanDeviceInWifi">&ndash;&nbsp;stopScanDeviceInWifi</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Stop scanning, this API can be use with startScanDeviceInWifi.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)stopScanDeviceInWifi</code></div>
+
+		    
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland/overseas)  (group/single user)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Stop scanning, this API can be use with startScanDeviceInWifi.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartDeviceManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addDeviceWithSSID:completion:" title="addDeviceWithSSID:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addDeviceWithSSID:completion:">&ndash;&nbsp;addDeviceWithSSID:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Add the appliance to SDK by the SSID of appliance,the appliance will be called added appliance.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addDeviceWithSSID:(NSString *)<em>ssid</em> completion:(void ( ^ ) ( NSError *error ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>ssid</code></th>
+						<td><p>Appliance SSID</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>Async call</p>
+
+<ul>
+<li>error.code contains: 0 succeed >0 failed, detailed definition in <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> or error.localizedDescription</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland/overseas)  (group/single user)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Add the appliance to SDK by the SSID of appliance,the appliance will be called added appliance.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartDeviceManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/stopAddDeviceBySSID:" title="stopAddDeviceBySSID:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/stopAddDeviceBySSID:">&ndash;&nbsp;stopAddDeviceBySSID:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Cancel the appliance adding process</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)stopAddDeviceBySSID:(void ( ^ ) ( NSError *error ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>Async call</p>
+
+<ul>
+<li>error.code contains: 0 succeed >0 failed, detailed definition in <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> or error.localizedDescription</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland/overseas)  (group/single user)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Cancel the appliance adding process</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartDeviceManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getDeviceInfoArray:" title="getDeviceInfoArray:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getDeviceInfoArray:">&ndash;&nbsp;getDeviceInfoArray:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get the appliance list already added by the SDK</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)getDeviceInfoArray:(void ( ^ ) ( NSError *error , NSArray *deviceList ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>Async call</p>
+
+<ul>
+<li>error.code contains: 0 succeed >0 failed, detailed definition in <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> or error.localizedDescription</li>
+<li><p>deviceList: added appliance list</p>
+
+<ul>
+<li>deviceId = &ldquo;&rdquo;;     //appliance ID</li>
+<li>deviceName = &ldquo;&rdquo;;   //appliance name</li>
+<li>deviceSn = &ldquo;&rdquo;;     //appliance SN</li>
+<li>deviceSsid = &ldquo;&rdquo;;   //appliance SSID</li>
+<li>deviceSubType = &ldquo;&rdquo;;//appliance subtype</li>
+<li>deviceType = &ldquo;&rdquo;;   //appliance type</li>
+<li>isActivity = &ldquo;&rdquo;;   //appliance activity status(family mode) or bindUserId = &ldquo;&rdquo;(friend mode，@&ldquo;&rdquo;:not activity，or the userId of the appliance)</li>
+<li>isWanOnline = &ldquo;&rdquo; ; //WAN online status， 1:online , 0:offline</li>
+<li>isLanOnline = &ldquo;&rdquo; ; //LAN online status， 1:online , 0:offline</li>
+</ul>
+</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland/overseas)  (group/single user)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get the appliance list already added by the SDK</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartDeviceManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getDeviceInfoAndBindInfoWithDeviceId:completion:" title="getDeviceInfoAndBindInfoWithDeviceId:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getDeviceInfoAndBindInfoWithDeviceId:completion:">&ndash;&nbsp;getDeviceInfoAndBindInfoWithDeviceId:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Query the bind or active information</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)getDeviceInfoAndBindInfoWithDeviceId:(NSString *)<em>deviceId</em> completion:(void ( ^ ) ( NSError *error , NSDictionary *deviceInfo ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>deviceId</code></th>
+						<td><p>query deviceId</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>Async call</p>
+
+<ul>
+<li>error.code contains: 0 succeed >0 failed, detailed definition in <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> or error.localizedDescription</li>
+<li><p>deviceInfo:appliance information</p>
+
+<ul>
+<li>isActivity        = &ldquo;&rdquo;;//activity status,0:not activity,1:already activity</li>
+<li>bindStatus        = &ldquo;&rdquo;;//bind status,0:not bind,1:bind with family mode, 2:bind with friend mode</li>
+<li>deviceDescription = &ldquo;&rdquo;;//description</li>
+<li>deviceSn          = &ldquo;&rdquo;;//appliance SN</li>
+<li>deviceSubType     = &ldquo;&rdquo;;//appliance subtype</li>
+<li>deviceName        = &ldquo;&rdquo;;//appliance name</li>
+<li>isWanOnline       = &ldquo;&rdquo; ;//WAN online status,1:online,0:offline</li>
+<li>isLanOnline       = &ldquo;&rdquo; ;//LAN online status,1:online,0:offline</li>
+<li>deviceType        = &ldquo;&rdquo;;//appliance type</li>
+<li>familyNumber      = &ldquo;&rdquo;;//the NO. of family of appliance （bindStatus=1）</li>
+<li>familyId          = &ldquo;&rdquo;;//the ID of family of appliance  （ bindStatus=1）</li>
+<li>familyName        = &ldquo;&rdquo;;//the name of family of appliance   （bindStatus=1)</li>
+<li>userAccount       = &ldquo;&rdquo;;//the user account of the appliance  （bindStatus=2）</li>
+<li>userId            = &ldquo;&rdquo;;//the user ID of the appliance（bindStatus=2）</li>
+<li>userName          = &ldquo;&rdquo;;//the user nickname of the appliance （bindStatus=2</li>
+</ul>
+</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland/overseas)  (group/single user)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Query the bind or active information</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartDeviceManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getDeviceNameWithSSID:" title="getDeviceNameWithSSID:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getDeviceNameWithSSID:">&ndash;&nbsp;getDeviceNameWithSSID:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get the appliance default name by the appliance SSID</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSString *)getDeviceNameWithSSID:(NSString *)<em>ssid</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>ssid</code></th>
+						<td><p>appliance SSID</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>the appliance default name</p>
+			</div>
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland/overseas)  (group/single user)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get the appliance default name by the appliance SSID</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartDeviceManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getDeviceInfoWithSSID:" title="getDeviceInfoWithSSID:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getDeviceInfoWithSSID:">&ndash;&nbsp;getDeviceInfoWithSSID:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get detailed info of appliance in the LAN. (call startScanDeviceInWifi first)</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSDictionary *)getDeviceInfoWithSSID:(NSString *)<em>ssid</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>ssid</code></th>
+						<td><p>appliance SSID</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>the information of appliance</p>
+
+<ul>
+<li>deviceId = XXXXXXXXX;</li>
+<li>deviceSn = XXXXXXXXX;</li>
+<li>deviceSsid = &ldquo;midea_XX_XXXX&rdquo;;</li>
+<li>deviceType = 0xXX;</li>
+<li>identifyTime = &ldquo;-1&rdquo;;</li>
+<li>identifyType = &ldquo;&rdquo;;</li>
+</ul>
+
+			</div>
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland/overseas)  (group/single user)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get detailed info of appliance in the LAN. (call startScanDeviceInWifi first)</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartDeviceManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/isQRCodeValid:" title="isQRCodeValid:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isQRCodeValid:">&ndash;&nbsp;isQRCodeValid:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Check if the qrcode is valid qrcode of midea smart appliance</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)isQRCodeValid:(NSString *)<em>qrcode</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>qrcode</code></th>
+						<td><p>qrcode string</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>YES:valid NO:invalid</p>
+			</div>
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland/overseas)  (group/single user)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Check if the qrcode is valid qrcode of midea smart appliance</p><div class="note"><p><strong>Note:</strong> App need to call this API after scan the qrcode.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartDeviceManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getSSIDfromQRCode:" title="getSSIDfromQRCode:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getSSIDfromQRCode:">&ndash;&nbsp;getSSIDfromQRCode:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get appliance SSID from qrcode string.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSString *)getSSIDfromQRCode:(NSString *)<em>qrcode</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>qrcode</code></th>
+						<td><p>qrcode string</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>appliance SSID</p>
+			</div>
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland/overseas)  (group/single user)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get appliance SSID from qrcode string.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartDeviceManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getSNfromQRCode:" title="getSNfromQRCode:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getSNfromQRCode:">&ndash;&nbsp;getSNfromQRCode:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get appliance SN(ciphertext) from qrcode string.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSString *)getSNfromQRCode:(NSString *)<em>qrcode</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>qrcode</code></th>
+						<td><p>qrcode string</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>appliance SN(ciphertext)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland/overseas)  (group/single user)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get appliance SN(ciphertext) from qrcode string.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartDeviceManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/modifyDeviceInformationWithDeviceId:modifiedName:modifiedDeviceDescripiton:completion:" title="modifyDeviceInformationWithDeviceId:modifiedName:modifiedDeviceDescripiton:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/modifyDeviceInformationWithDeviceId:modifiedName:modifiedDeviceDescripiton:completion:">&ndash;&nbsp;modifyDeviceInformationWithDeviceId:modifiedName:modifiedDeviceDescripiton:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Modify the appliance info</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)modifyDeviceInformationWithDeviceId:(NSString *)<em>deviceId</em> modifiedName:(NSString *)<em>deviceName</em> modifiedDeviceDescripiton:(NSString *)<em>deviceDescription</em> completion:(void ( ^ ) ( NSError *error ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>deviceId</code></th>
+						<td><p>appliance ID</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>deviceName</code></th>
+						<td><p>new appliance name</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>deviceDescription</code></th>
+						<td><p>new appliance description</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>Async call</p>
+
+<ul>
+<li>error.code contains: 0 succeed >0 failed, detailed definition in <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> or error.localizedDescription</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland/overseas)  (group/single user)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Modify the appliance info</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartDeviceManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getDeviceTypeNameWithDeviceType:" title="getDeviceTypeNameWithDeviceType:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getDeviceTypeNameWithDeviceType:">&ndash;&nbsp;getDeviceTypeNameWithDeviceType:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get the name of appliance type by appliance type</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSArray *)getDeviceTypeNameWithDeviceType:(NSString *)<em>deviceType</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>deviceType</code></th>
+						<td><p>appliance type, use FF parameter will get all the names of appliance type</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>type list</p>
+
+<ul>
+<li>deviceType = 10;</li>
+<li>deviceTypeChsName = &ldquo;\U667a\U80fd\U63d2\U5ea7&rdquo;;</li>
+<li>deviceTypeEngName = &ldquo;&rdquo;;</li>
+</ul>
+
+			</div>
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland/overseas)  (group/single user)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get the name of appliance type by appliance type</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartDeviceManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/enableSSIDFormatWithFormatArray:" title="enableSSIDFormatWithFormatArray:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/enableSSIDFormatWithFormatArray:">&ndash;&nbsp;enableSSIDFormatWithFormatArray:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Set the SSID format need to support in SDK. such as midea_XX_XXXX,net_XX_XXXX,ms0001_XX_XXXX</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)enableSSIDFormatWithFormatArray:(NSArray *)<em>formatArray</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>formatArray</code></th>
+						<td><p>valid SSID fromat:midea_xx_xxxx,net_xx_xxxx</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland/overseas)  (group/single user)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Set the SSID format need to support in SDK. such as midea_XX_XXXX,net_XX_XXXX,ms0001_XX_XXXX</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartDeviceManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/deviceWifiModuleVersionInfoWithDeviceSsid:completion:" title="deviceWifiModuleVersionInfoWithDeviceSsid:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/deviceWifiModuleVersionInfoWithDeviceSsid:completion:">&ndash;&nbsp;deviceWifiModuleVersionInfoWithDeviceSsid:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get the version info of the wifi module</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)deviceWifiModuleVersionInfoWithDeviceSsid:(NSString *)<em>deviceSsid</em> completion:(void ( ^ ) ( NSError *error , NSDictionary *dict ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>deviceSsid</code></th>
+						<td><p>appliance SSID</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>Async call</p>
+
+<ul>
+<li>error.code contains: 0 succeed >0 failed, detailed definition in <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> or error.localizedDescription</li>
+<li><p>dict:appliance information</p>
+
+<ul>
+<li>@&ldquo;deviceProtocolVersion&rdquo;:  wifi module version</li>
+<li>@&ldquo;deviceId&rdquo;: appliance ID</li>
+</ul>
+</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland)  (group/single user)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Get the version info of the wifi module</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartDeviceManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/deviceWifiModuleUpdateWithDeviceId:progress:completion:" title="deviceWifiModuleUpdateWithDeviceId:progress:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/deviceWifiModuleUpdateWithDeviceId:progress:completion:">&ndash;&nbsp;deviceWifiModuleUpdateWithDeviceId:progress:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Upgrade wifi module</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)deviceWifiModuleUpdateWithDeviceId:(NSString *)<em>deviceId</em> progress:(void ( ^ ) ( float progress ))<em>progress</em> completion:(void ( ^ ) ( NSError *error ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>deviceId</code></th>
+						<td><p>appliance ID</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>progress</code></th>
+						<td><p>uploading progress 1:100%</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>Async call</p>
+
+<ul>
+<li>error.code contains: 0 succeed >0 failed, detailed definition in <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> or error.localizedDescription</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland)  (group/single user)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Upgrade wifi module</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartDeviceManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/restartModuleWithDeviceId:completion:" title="restartModuleWithDeviceId:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/restartModuleWithDeviceId:completion:">&ndash;&nbsp;restartModuleWithDeviceId:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Reboot the wifi module</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)restartModuleWithDeviceId:(NSString *)<em>deviceId</em> completion:(void ( ^ ) ( NSError *error ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>deviceId</code></th>
+						<td><p>appliance ID</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>Async call</p>
+
+<ul>
+<li>error.code contains: 0 succeed >0 failed, detailed definition in <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> or error.localizedDescription</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland)  (group/single user)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Reboot the wifi module</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartDeviceManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/isDesignatedVersion:" title="isDesignatedVersion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isDesignatedVersion:">&ndash;&nbsp;isDesignatedVersion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Check if wifi module upgrade available</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)isDesignatedVersion:(NSString *)<em>wifiVersion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>wifiVersion</code></th>
+						<td><p>current wifi module version</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>YES or NO</p>
+			</div>
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland)  (group/single user)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Check if wifi module upgrade available</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartDeviceManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/controlDeviceWithId:operationDic:completion:" title="controlDeviceWithId:operationDic:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/controlDeviceWithId:operationDic:completion:">&ndash;&nbsp;controlDeviceWithId:operationDic:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Appliance status control</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)controlDeviceWithId:(NSString *)<em>deviceId</em> operationDic:(NSDictionary *)<em>operationDic</em> completion:(void ( ^ ) ( NSError *error , NSDictionary *dict ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>deviceId</code></th>
+						<td><p>appliance ID</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>operationDic</code></th>
+						<td><p>control information dictionary</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>Async call</p>
+
+<ul>
+<li>error.code contains: 0 succeed >0 failed, detailed definition in <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> or error.localizedDescription</li>
+<li>dict:appliance new status</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland/overseas)  (group/single user)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Appliance status control</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartDeviceManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/queryDeviceWithId:completion:" title="queryDeviceWithId:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/queryDeviceWithId:completion:">&ndash;&nbsp;queryDeviceWithId:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Query appliance status</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)queryDeviceWithId:(NSString *)<em>deviceId</em> completion:(void ( ^ ) ( NSError *error , NSDictionary *dict ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>deviceId</code></th>
+						<td><p>appliance ID</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>Async call</p>
+
+<ul>
+<li>error.code contains: 0 succeed >0 failed, detailed definition in <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> or error.localizedDescription</li>
+<li>dict:appliance current status</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland/overseas)  (group/single user)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Query appliance status</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartDeviceManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/queryDeviceOTAState:completion:" title="queryDeviceOTAState:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/queryDeviceOTAState:completion:">&ndash;&nbsp;queryDeviceOTAState:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>  Query appliance OTA state</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)queryDeviceOTAState:(NSString *)<em>deviceId</em> completion:(void ( ^ ) ( NSError *error , NSDictionary *deviceInfo ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>deviceId</code></th>
+						<td><p>appliance ID</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>Async call</p>
+
+<ul>
+<li>error.code contains: 0 succeed >0 failed, detailed definition in <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> or error.localizedDescription</li>
+<li>deviceInfo：appliance information</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland/overseas)  (group/single user)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>  Query appliance OTA state</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartDeviceManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/startDeviceOTAState:completion:" title="startDeviceOTAState:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/startDeviceOTAState:completion:">&ndash;&nbsp;startDeviceOTAState:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Start the upgrade of appliance OTA</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)startDeviceOTAState:(NSString *)<em>deviceId</em> completion:(void ( ^ ) ( NSError *error ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>deviceId</code></th>
+						<td><p>appliance ID</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>Async call</p>
+
+<ul>
+<li>error.code contains: 0 succeed >0 failed, detailed definition in <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> or error.localizedDescription</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland/overseas)  (group/single user)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Start the upgrade of appliance OTA</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartDeviceManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/decryptSNWithQRCode:completion:" title="decryptSNWithQRCode:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/decryptSNWithQRCode:completion:">&ndash;&nbsp;decryptSNWithQRCode:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Decrypted the appliance SN by qrcode string</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)decryptSNWithQRCode:(NSString *)<em>qrcode</em> completion:(void ( ^ ) ( NSError *error , NSDictionary *dictionary ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>qrcode</code></th>
+						<td><p>qrcode string</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>Async call</p>
+
+<ul>
+<li>error.code contains: 0 succeed >0 failed, detailed definition in <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> or error.localizedDescription</li>
+<li>categoryStr:appliance type</li>
+<li>deviceSn:appliance SN</li>
+<li>ssid:appliance SSID</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland)  (group/single user)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Decrypted the appliance SN by qrcode string</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartDeviceManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Family Methods" name="task_Family Methods"></a>
+						<h2 class="task-title">Family Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/getMyFamilysDeviceListWithCompletion:" title="getMyFamilysDeviceListWithCompletion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getMyFamilysDeviceListWithCompletion:">&ndash;&nbsp;getMyFamilysDeviceListWithCompletion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取用户所有家庭的家电列表</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)getMyFamilysDeviceListWithCompletion:(void ( ^ ) ( NSError *error , NSArray *deviceList ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>异步执行返回(block)</p>
+
+<ul>
+<li>error：error.code值为0表示执行成功；大于0表示执行失败；具体错误提示见 <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> 定义或 error.localizedDescription</li>
+<li>deviceList：设备列表</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland)  (group)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>获取用户所有家庭的家电列表</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartDeviceManager+Family.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getDeviceListWithFamilyId:completion:" title="getDeviceListWithFamilyId:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getDeviceListWithFamilyId:completion:">&ndash;&nbsp;getDeviceListWithFamilyId:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取指定家庭的家电列表</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)getDeviceListWithFamilyId:(NSString *)<em>familyId</em> completion:(void ( ^ ) ( NSError *error , NSArray *deviceList ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>familyId</code></th>
+						<td><p>指定家庭id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>异步执行返回(block)</p>
+
+<ul>
+<li>error：error.code值为0表示执行成功；大于0表示执行失败；具体错误提示见 <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> 定义或error.localizedDescription</li>
+<li>deviceList：设备列表</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland)  (group)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>获取指定家庭的家电列表</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartDeviceManager+Family.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/activeDeviceWithQRCode:familyId:completion:" title="activeDeviceWithQRCode:familyId:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/activeDeviceWithQRCode:familyId:completion:">&ndash;&nbsp;activeDeviceWithQRCode:familyId:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>激活家电. 激活指激活家电的远程控制.通过二维码激活</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)activeDeviceWithQRCode:(NSString *)<em>strCode</em> familyId:(NSString *)<em>familyId</em> completion:(void ( ^ ) ( NSError *error ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>strCode</code></th>
+						<td><p>从扫描到的家电二维码串获取的二维码</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>familyId</code></th>
+						<td><p>设备要绑定的家庭的familyId</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>异步执行返回(block)</p>
+
+<ul>
+<li>error：error.code值为0表示执行成功；大于0表示执行失败；具体错误提示见 <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> 定义或error.localizedDescription</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland)  (group)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>激活家电. 激活指激活家电的远程控制.通过二维码激活</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartDeviceManager+Family.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/activeDeviceWithDeviceSN:familyId:completion:" title="activeDeviceWithDeviceSN:familyId:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/activeDeviceWithDeviceSN:familyId:completion:">&ndash;&nbsp;activeDeviceWithDeviceSN:familyId:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>激活家电，激活指激活家电的远程控制.通过SN激活</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)activeDeviceWithDeviceSN:(NSString *)<em>deviceSN</em> familyId:(NSString *)<em>familyId</em> completion:(void ( ^ ) ( NSError *error ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>deviceSN</code></th>
+						<td><p>设备SN（明文）</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>familyId</code></th>
+						<td><p>设备要绑定的家庭的familyId</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>异步执行返回(block)</p>
+
+<ul>
+<li>error：error.code值为0表示执行成功；大于0表示执行失败；具体错误提示见 <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> 定义或error.localizedDescription</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland)  (group)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>激活家电，激活指激活家电的远程控制.通过SN激活</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartDeviceManager+Family.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/activeDeviceWithDeviceSN:familyId:extraDic:completion:" title="activeDeviceWithDeviceSN:familyId:extraDic:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/activeDeviceWithDeviceSN:familyId:extraDic:completion:">&ndash;&nbsp;activeDeviceWithDeviceSN:familyId:extraDic:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>激活家电，激活指激活家电的远程控制.通过SN激活</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)activeDeviceWithDeviceSN:(NSString *)<em>deviceSN</em> familyId:(NSString *)<em>familyId</em> extraDic:(NSDictionary *)<em>extraDic</em> completion:(void ( ^ ) ( NSError *error , NSDictionary *dictionary ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>deviceSN</code></th>
+						<td><p>设备SN（明文）</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>familyId</code></th>
+						<td><p>设备要绑定的家庭的familyId</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>extraDic</code></th>
+						<td><p>extra parameter dictionary (Please refer to MSmartDefinition.h for detailed Dictionry key.)</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>异步执行返回(block)</p>
+
+<ul>
+<li>error：error.code值为0表示执行成功；大于0表示执行失败；具体错误提示见 <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> 定义或error.localizedDescription</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland)  (group)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>激活家电，激活指激活家电的远程控制.通过SN激活</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartDeviceManager+Family.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/add2GDeviceByQrCode:familyId:completion:" title="add2GDeviceByQrCode:familyId:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/add2GDeviceByQrCode:familyId:completion:">&ndash;&nbsp;add2GDeviceByQrCode:familyId:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>绑定2G模块通用接口，仅用于家庭组模型。</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)add2GDeviceByQrCode:(NSString *)<em>strCode</em> familyId:(NSString *)<em>familyId</em> completion:(void ( ^ ) ( NSError *error , NSDictionary *deviceInfo ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>strCode</code></th>
+						<td><p>从二维码中获取的字符串</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>familyId</code></th>
+						<td><p>设备要绑定的家庭的familyId</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>异步执行返回(block)</p>
+
+<ul>
+<li>error：error.code值为0表示执行成功；大于0表示执行失败；具体错误提示见 <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> 定义或error.localizedDescription</li>
+<li><p>deviceInfo：设备信息</p>
+
+<ul>
+<li>deviceDescription = &ldquo;&rdquo;;</li>
+<li>deviceName = &ldquo;&rdquo;;</li>
+<li>deviceId = &ldquo;&rdquo;;</li>
+<li>isWanOnline = &ldquo;&rdquo;;</li>
+<li>isLanOnline = &ldquo;&rdquo;;</li>
+<li>deviceProtocolVersion = &ldquo;&rdquo;;</li>
+<li>deviceSn = ;</li>
+<li>deviceSsid = &ldquo;&rdquo;;</li>
+<li>deviceSubType = ;</li>
+<li>deviceType = ;</li>
+<li>isActivity = ;</li>
+</ul>
+</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland)  (group)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>绑定2G模块通用接口，仅用于家庭组模型。</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartDeviceManager+Family.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/deleteDeviceWithDeviceID:completion:" title="deleteDeviceWithDeviceID:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/deleteDeviceWithDeviceID:completion:">&ndash;&nbsp;deleteDeviceWithDeviceID:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>判断是否激活，删除本地或者服务器的家电</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)deleteDeviceWithDeviceID:(NSString *)<em>DeviceID</em> completion:(void ( ^ ) ( NSError *error , BOOL isSuccess ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>DeviceID</code></th>
+						<td><p>设备ID</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>异步执行返回(block)</p>
+
+<ul>
+<li>error：error.code值为0表示执行成功；大于0表示执行失败；具体错误提示见 <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> 定义或error.localizedDescription</li>
+<li>isSuccess：是否删除成功</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland)  (group)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>判断是否激活，删除本地或者服务器的家电</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartDeviceManager+Family.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Friend Methods" name="task_Friend Methods"></a>
+						<h2 class="task-title">Friend Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/bindDeviceWithDeviceSN:andTsn:completion:" title="bindDeviceWithDeviceSN:andTsn:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/bindDeviceWithDeviceSN:andTsn:completion:">&ndash;&nbsp;bindDeviceWithDeviceSN:andTsn:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Bind appliance with user</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)bindDeviceWithDeviceSN:(NSString *)<em>deviceSN</em> andTsn:(NSString *)<em>tsn</em> completion:(void ( ^ ) ( NSError *error ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>deviceSN</code></th>
+						<td><p>appliance SN</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>tsn</code></th>
+						<td><p>tsn from qrcode,it can be nil</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>Async call</p>
+
+<ul>
+<li>error.code contains: 0 succeed >0 failed, detailed definition in <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> or error.localizedDescription</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland/overseas)  (single user)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Bind appliance with user</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartDeviceManager+Friend.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/unBindDeviceWithDeviceID:completion:" title="unBindDeviceWithDeviceID:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/unBindDeviceWithDeviceID:completion:">&ndash;&nbsp;unBindDeviceWithDeviceID:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Cancel bind appliance with user</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)unBindDeviceWithDeviceID:(NSString *)<em>deviceID</em> completion:(void ( ^ ) ( NSError *error ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>deviceID</code></th>
+						<td><p>appliance ID</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>Async call</p>
+
+<ul>
+<li>error.code contains: 0 succeed >0 failed, detailed definition in <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> or error.localizedDescription</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland/overseas)  (single user)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Cancel bind appliance with user</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartDeviceManager+Friend.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/shareDeviceWithDeviceID:toUserId:completion:" title="shareDeviceWithDeviceID:toUserId:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/shareDeviceWithDeviceID:toUserId:completion:">&ndash;&nbsp;shareDeviceWithDeviceID:toUserId:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The Appliance owner share the appliance to another user</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)shareDeviceWithDeviceID:(NSString *)<em>deviceID</em> toUserId:(NSString *)<em>UserId</em> completion:(void ( ^ ) ( NSError *error ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>deviceID</code></th>
+						<td><p>appliance ID（eg:17591-17592-17593）</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>UserId</code></th>
+						<td><p>user ID of be shared （eg:1001-1002-1003）</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>Async call</p>
+
+<ul>
+<li>error.code contains: 0 succeed >0 failed, detailed definition in <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> or error.localizedDescription</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland/overseas)  (single user)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The Appliance owner share the appliance to another user</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartDeviceManager+Friend.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/responseToShareDeviceWithDeviceID:account:accept:completion:" title="responseToShareDeviceWithDeviceID:account:accept:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/responseToShareDeviceWithDeviceID:account:accept:completion:">&ndash;&nbsp;responseToShareDeviceWithDeviceID:account:accept:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Other user reply the appliance sharing from the owner</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)responseToShareDeviceWithDeviceID:(NSString *)<em>deviceID</em> account:(NSString *)<em>account</em> accept:(BOOL)<em>accept</em> completion:(void ( ^ ) ( NSError *error ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>deviceID</code></th>
+						<td><p>appliance ID（eg:17591）</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>account</code></th>
+						<td><p>account of the owner</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>accept</code></th>
+						<td><p>accept or not</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>Async call</p>
+
+<ul>
+<li>error.code contains: 0 succeed >0 failed, detailed definition in <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> or error.localizedDescription</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland/overseas)  (single user)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Other user reply the appliance sharing from the owner</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartDeviceManager+Friend.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/cancelShareDeviceWithDeviceID:toUserId:completion:" title="cancelShareDeviceWithDeviceID:toUserId:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/cancelShareDeviceWithDeviceID:toUserId:completion:">&ndash;&nbsp;cancelShareDeviceWithDeviceID:toUserId:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Cancel the appliance sharing（the owner cancel share or the user cancel the shared）</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)cancelShareDeviceWithDeviceID:(NSString *)<em>deviceID</em> toUserId:(NSString *)<em>userId</em> completion:(void ( ^ ) ( NSError *error ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>deviceID</code></th>
+						<td><p>appliance ID</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>userId</code></th>
+						<td><p>user ID</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>Async call</p>
+
+<ul>
+<li>error.code contains: 0 succeed >0 failed, detailed definition in <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> or error.localizedDescription</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland/overseas)  (single user)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Cancel the appliance sharing（the owner cancel share or the user cancel the shared）</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartDeviceManager+Friend.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/requestDeviceShareResponseWithDeviceId:andUserId:andAccept:completion:" title="requestDeviceShareResponseWithDeviceId:andUserId:andAccept:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/requestDeviceShareResponseWithDeviceId:andUserId:andAccept:completion:">&ndash;&nbsp;requestDeviceShareResponseWithDeviceId:andUserId:andAccept:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The owner reply the sharing request from other users</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)requestDeviceShareResponseWithDeviceId:(NSString *)<em>deviceId</em> andUserId:(NSString *)<em>UserId</em> andAccept:(BOOL)<em>accept</em> completion:(void ( ^ ) ( NSError *error ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>deviceId</code></th>
+						<td><p>appliance ID</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>UserId</code></th>
+						<td><p>request user ID</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>accept</code></th>
+						<td><p>accept or not</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>Async call</p>
+
+<ul>
+<li>error.code contains: 0 succeed >0 failed, detailed definition in <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> or error.localizedDescription</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland/overseas)  (single user)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The owner reply the sharing request from other users</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartDeviceManager+Friend.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/requestDeviceShareWithDeviceId:andUserId:completion:" title="requestDeviceShareWithDeviceId:andUserId:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/requestDeviceShareWithDeviceId:andUserId:completion:">&ndash;&nbsp;requestDeviceShareWithDeviceId:andUserId:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Other users ask the owner share the appliance to them</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)requestDeviceShareWithDeviceId:(NSString *)<em>deviceId</em> andUserId:(NSString *)<em>UserId</em> completion:(void ( ^ ) ( NSError *error ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>deviceId</code></th>
+						<td><p>appliance ID</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>UserId</code></th>
+						<td><p>the user ID of the owner</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>Async call</p>
+
+<ul>
+<li>error.code contains: 0 succeed >0 failed, detailed definition in <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> or error.localizedDescription</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland/overseas)  (single user)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Other users ask the owner share the appliance to them</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartDeviceManager+Friend.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getShareUserListByDeviceIds:completion:" title="getShareUserListByDeviceIds:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getShareUserListByDeviceIds:completion:">&ndash;&nbsp;getShareUserListByDeviceIds:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Query the related user list of a specific appliance</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)getShareUserListByDeviceIds:(NSArray *)<em>devicesArray</em> completion:(void ( ^ ) ( NSError *error , NSArray *usersArray ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>devicesArray</code></th>
+						<td><p>appliance ID list</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>Async call</p>
+
+<ul>
+<li>error.code contains: 0 succeed >0 failed, detailed definition in <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> or error.localizedDescription</li>
+<li>usersArray:users list</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland/overseas)  (single user)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Query the related user list of a specific appliance</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartDeviceManager+Friend.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/modifyDeviceNameWithDeviceId:deviceName:completion:" title="modifyDeviceNameWithDeviceId:deviceName:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/modifyDeviceNameWithDeviceId:deviceName:completion:">&ndash;&nbsp;modifyDeviceNameWithDeviceId:deviceName:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Modify appliance remarks name</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)modifyDeviceNameWithDeviceId:(NSString *)<em>deviceId</em> deviceName:(NSString *)<em>deviceName</em> completion:(void ( ^ ) ( NSError *error ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>deviceId</code></th>
+						<td><p>appliance ID</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>deviceName</code></th>
+						<td><p>new appliance remarks name</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>Async call</p>
+
+<ul>
+<li>error.code contains: 0 succeed >0 failed, detailed definition in <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> or error.localizedDescription</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland/overseas)  (single user)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Modify appliance remarks name</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartDeviceManager+Friend.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2017 Midea Smart Technology Co., LTD. All rights reserved. Updated: 2017-09-18</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

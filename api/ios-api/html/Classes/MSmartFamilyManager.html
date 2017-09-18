@@ -1,0 +1,1573 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>MSmartFamilyManager Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">MSmartSDK_V3.1.49 </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Midea Smart Technology Co., LTD.</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/sharedManager">+ sharedManager</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/createFamilyWithName:description:address:coordinate:completion:">- createFamilyWithName:description:address:coordinate:completion:</option>
+		
+		<option value="//api/name/deleteFamilyMemberWithUserID:familyID:completion:">- deleteFamilyMemberWithUserID:familyID:completion:</option>
+		
+		<option value="//api/name/deleteFamilyWithFamilyD:completion:">- deleteFamilyWithFamilyD:completion:</option>
+		
+		<option value="//api/name/getCrurrentFamilyId">- getCrurrentFamilyId</option>
+		
+		<option value="//api/name/getCurrentFamilyName">- getCurrentFamilyName</option>
+		
+		<option value="//api/name/getFamilyListWithCompletion:">- getFamilyListWithCompletion:</option>
+		
+		<option value="//api/name/getFamilyMemberListWithFamilyID:completion:">- getFamilyMemberListWithFamilyID:completion:</option>
+		
+		<option value="//api/name/inviteFamilyMemberResponseWithFamilyID:isAccept:completion:">- inviteFamilyMemberResponseWithFamilyID:isAccept:completion:</option>
+		
+		<option value="//api/name/inviteFamilyMemberWithFamilyID:account:completion:">- inviteFamilyMemberWithFamilyID:account:completion:</option>
+		
+		<option value="//api/name/joinFamilyResponseWith:familyID:userID:completion:">- joinFamilyResponseWith:familyID:userID:completion:</option>
+		
+		<option value="//api/name/joinFamilyWithFamilyID:completion:">- joinFamilyWithFamilyID:completion:</option>
+		
+		<option value="//api/name/modifyFamilyInformationWithFamilyID:familyName:familyDescription:familyAddress:familyCoordinate:completion:">- modifyFamilyInformationWithFamilyID:familyName:familyDescription:familyAddress:familyCoordinate:completion:</option>
+		
+		<option value="//api/name/quitFamilyWithFamilyID:completion:">- quitFamilyWithFamilyID:completion:</option>
+		
+		<option value="//api/name/searchFamilyWithFamilyID:completion:">- searchFamilyWithFamilyID:completion:</option>
+		
+		<option value="//api/name/searchFamilyWithFamilyName:completion:">- searchFamilyWithFamilyName:completion:</option>
+		
+		<option value="//api/name/searchFamilyWithFamilyNumber:completion:">- searchFamilyWithFamilyNumber:completion:</option>
+		
+		<option value="//api/name/setDefaultFamilyWithFamilyID:completion:">- setDefaultFamilyWithFamilyID:completion:</option>
+		
+		<option value="//api/name/switchCurrentFamilyWithFamilyID:completion:">- switchCurrentFamilyWithFamilyID:completion:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">MSmartFamilyManager Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td><a href="../Classes/MSmartBaseManager.html">MSmartBaseManager</a> : NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>MSmartFamilyManager.h<br />MSmartFamilyManager.m</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Family manager</p><div class="note"><p><strong>Note:</strong> This class is only available for Family mode (MSmartWorkModeFamily) and is unavailable for Friend mode(MSmartWorkModeFriend),see <a href="../Constants/MSmartWorkMode.html">MSmartWorkMode</a> for detailed mode.</p></div>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/sharedManager" title="sharedManager"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sharedManager">+&nbsp;sharedManager</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>家庭管理类的单例.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (instancetype)sharedManager</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>家庭管理类的单例</p>
+			</div>
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland)  (group)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>家庭管理类的单例.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartFamilyManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/joinFamilyWithFamilyID:completion:" title="joinFamilyWithFamilyID:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/joinFamilyWithFamilyID:completion:">&ndash;&nbsp;joinFamilyWithFamilyID:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>加入家庭：用户申请加入某个家庭，将接口调用成功，会推送一条消息给该家庭的家长，若该家庭的家长同意则加入家庭成功</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)joinFamilyWithFamilyID:(NSString *)<em>familyID</em> completion:(void ( ^ ) ( NSError *error ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>familyID</code></th>
+						<td><p>申请加入的家庭Id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>异步执行返回(block)</p>
+
+<ul>
+<li>error：error.code值为0表示执行成功；大于0表示执行失败；具体错误提示见 <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> 定义或error.localizedDescription</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>加入家庭：用户申请加入某个家庭，将接口调用成功，会推送一条消息给该家庭的家长，若该家庭的家长同意则加入家庭成功</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartFamilyManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/joinFamilyResponseWith:familyID:userID:completion:" title="joinFamilyResponseWith:familyID:userID:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/joinFamilyResponseWith:familyID:userID:completion:">&ndash;&nbsp;joinFamilyResponseWith:familyID:userID:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>加入家庭应答：当家长收到申请加入的推送后，调用该接口应答是否同意加入，若同意加入则该用户会成为家庭的成员，并且推送消息通知所有家庭成员</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)joinFamilyResponseWith:(BOOL)<em>isAccept</em> familyID:(NSString *)<em>familyID</em> userID:(NSString *)<em>userID</em> completion:(void ( ^ ) ( NSError *error ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>isAccept</code></th>
+						<td><p>是否同意</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>familyID</code></th>
+						<td><p>申请加入的家庭Id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>userID</code></th>
+						<td><p>申请的用户Id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>异步执行返回(block)</p>
+
+<ul>
+<li>error：error.code值为0表示执行成功；大于0表示执行失败；具体错误提示见 <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> 定义或error.localizedDescription</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland)  (group)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>加入家庭应答：当家长收到申请加入的推送后，调用该接口应答是否同意加入，若同意加入则该用户会成为家庭的成员，并且推送消息通知所有家庭成员</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartFamilyManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/quitFamilyWithFamilyID:completion:" title="quitFamilyWithFamilyID:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/quitFamilyWithFamilyID:completion:">&ndash;&nbsp;quitFamilyWithFamilyID:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>退出家庭: 家庭成员退出某个家庭</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)quitFamilyWithFamilyID:(NSString *)<em>familyID</em> completion:(void ( ^ ) ( NSError *error ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>familyID</code></th>
+						<td><p>需要退出的家庭Id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>异步执行返回(block)</p>
+
+<ul>
+<li>error：error.code值为0表示执行成功；大于0表示执行失败；具体错误提示见 <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> 定义或error.localizedDescription</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland)  (group)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>退出家庭: 家庭成员退出某个家庭</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartFamilyManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/inviteFamilyMemberWithFamilyID:account:completion:" title="inviteFamilyMemberWithFamilyID:account:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/inviteFamilyMemberWithFamilyID:account:completion:">&ndash;&nbsp;inviteFamilyMemberWithFamilyID:account:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>邀请用户加入家庭:家长邀请某个用户加入某个家庭，将接口调用成功，会推送一条消息给该用户，若该用户同意则加入家庭成功</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)inviteFamilyMemberWithFamilyID:(NSString *)<em>familyID</em> account:(NSString *)<em>account</em> completion:(void ( ^ ) ( NSError *error ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>familyID</code></th>
+						<td><p>家庭Id</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>account</code></th>
+						<td><p>邀请成员的邮箱或者手机号</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>异步执行返回(block)</p>
+
+<ul>
+<li>error：error.code值为0表示执行成功；大于0表示执行失败；具体错误提示见 <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> 定义或error.localizedDescription</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland)  (group)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>邀请用户加入家庭:家长邀请某个用户加入某个家庭，将接口调用成功，会推送一条消息给该用户，若该用户同意则加入家庭成功</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartFamilyManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/inviteFamilyMemberResponseWithFamilyID:isAccept:completion:" title="inviteFamilyMemberResponseWithFamilyID:isAccept:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/inviteFamilyMemberResponseWithFamilyID:isAccept:completion:">&ndash;&nbsp;inviteFamilyMemberResponseWithFamilyID:isAccept:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>邀请用户加入家庭应答：当用户收到邀请的推送后，调用该接口应答是否同意加入，若同意加入则该用户会成为家庭的成员，并且推送消息通知所有家庭成员</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)inviteFamilyMemberResponseWithFamilyID:(NSString *)<em>familyID</em> isAccept:(BOOL)<em>isAccept</em> completion:(void ( ^ ) ( NSError *error ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>familyID</code></th>
+						<td><p>家庭ID</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>isAccept</code></th>
+						<td><p>是否接受邀请</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>异步执行返回(block)</p>
+
+<ul>
+<li>error：error.code值为0表示执行成功；大于0表示执行失败；具体错误提示见 <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> 定义或error.localizedDescription</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland)  (group)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>邀请用户加入家庭应答：当用户收到邀请的推送后，调用该接口应答是否同意加入，若同意加入则该用户会成为家庭的成员，并且推送消息通知所有家庭成员</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartFamilyManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/deleteFamilyMemberWithUserID:familyID:completion:" title="deleteFamilyMemberWithUserID:familyID:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/deleteFamilyMemberWithUserID:familyID:completion:">&ndash;&nbsp;deleteFamilyMemberWithUserID:familyID:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>删除家庭成员</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)deleteFamilyMemberWithUserID:(NSString *)<em>userID</em> familyID:(NSString *)<em>familyID</em> completion:(void ( ^ ) ( NSError *error ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>userID</code></th>
+						<td><p>用户ID</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>familyID</code></th>
+						<td><p>家庭ID</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>异步执行返回(block)</p>
+
+<ul>
+<li>error：error.code值为0表示执行成功；大于0表示执行失败；具体错误提示见 <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> 定义或error.localizedDescription</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland)  (group)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>删除家庭成员</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartFamilyManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/deleteFamilyWithFamilyD:completion:" title="deleteFamilyWithFamilyD:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/deleteFamilyWithFamilyD:completion:">&ndash;&nbsp;deleteFamilyWithFamilyD:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>删除一个家庭</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)deleteFamilyWithFamilyD:(NSString *)<em>familyID</em> completion:(void ( ^ ) ( NSError *error ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>familyID</code></th>
+						<td><p>家庭ID</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>异步执行返回(block)</p>
+
+<ul>
+<li>error：error.code值为0表示执行成功；大于0表示执行失败；具体错误提示见 <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> 定义或error.localizedDescription</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland)  (group)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>删除一个家庭</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartFamilyManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/createFamilyWithName:description:address:coordinate:completion:" title="createFamilyWithName:description:address:coordinate:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/createFamilyWithName:description:address:coordinate:completion:">&ndash;&nbsp;createFamilyWithName:description:address:coordinate:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>创建一个家庭</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)createFamilyWithName:(NSString *)<em>familyName</em> description:(NSString *)<em>description</em> address:(NSString *)<em>address</em> coordinate:(NSString *)<em>coordinate</em> completion:(void ( ^ ) ( NSError *error ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>familyName</code></th>
+						<td><p>家庭名称(必填)</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>description</code></th>
+						<td><p>家庭描述(选填)</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>address</code></th>
+						<td><p>家庭地址(选填)</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>coordinate</code></th>
+						<td><p>地理位置(选填)</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>异步执行返回(block)</p>
+
+<ul>
+<li>error：error.code值为0表示执行成功；大于0表示执行失败；具体错误提示见 <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> 定义或error.localizedDescription</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland)  (group)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>创建一个家庭</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartFamilyManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/switchCurrentFamilyWithFamilyID:completion:" title="switchCurrentFamilyWithFamilyID:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/switchCurrentFamilyWithFamilyID:completion:">&ndash;&nbsp;switchCurrentFamilyWithFamilyID:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>切换当前家庭</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)switchCurrentFamilyWithFamilyID:(NSString *)<em>familyID</em> completion:(void ( ^ ) ( NSError *error ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>familyID</code></th>
+						<td><p>家庭ID</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>异步执行返回(block)</p>
+
+<ul>
+<li>error：error.code值为0表示执行成功；大于0表示执行失败；具体错误提示见 <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> 定义或error.localizedDescription</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland)  (group)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>切换当前家庭</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartFamilyManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/modifyFamilyInformationWithFamilyID:familyName:familyDescription:familyAddress:familyCoordinate:completion:" title="modifyFamilyInformationWithFamilyID:familyName:familyDescription:familyAddress:familyCoordinate:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/modifyFamilyInformationWithFamilyID:familyName:familyDescription:familyAddress:familyCoordinate:completion:">&ndash;&nbsp;modifyFamilyInformationWithFamilyID:familyName:familyDescription:familyAddress:familyCoordinate:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>修改家庭信息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)modifyFamilyInformationWithFamilyID:(NSString *)<em>familyID</em> familyName:(NSString *)<em>familyName</em> familyDescription:(NSString *)<em>familyDescription</em> familyAddress:(NSString *)<em>familyAddress</em> familyCoordinate:(NSString *)<em>familyCoordinate</em> completion:(void ( ^ ) ( NSError *error ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>familyID</code></th>
+						<td><p>家庭ID</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>familyName</code></th>
+						<td><p>家庭名称</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>familyDescription</code></th>
+						<td><p>家庭描述</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>familyAddress</code></th>
+						<td><p>家庭地址</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>familyCoordinate</code></th>
+						<td><p>家庭位置</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>异步执行返回(block)</p>
+
+<ul>
+<li>error：error.code值为0表示执行成功；大于0表示执行失败；具体错误提示见 <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> 定义或error.localizedDescription</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland)  (group)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>修改家庭信息</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartFamilyManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setDefaultFamilyWithFamilyID:completion:" title="setDefaultFamilyWithFamilyID:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setDefaultFamilyWithFamilyID:completion:">&ndash;&nbsp;setDefaultFamilyWithFamilyID:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置默认家庭</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setDefaultFamilyWithFamilyID:(NSString *)<em>familyID</em> completion:(void ( ^ ) ( NSError *error ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>familyID</code></th>
+						<td><p>家庭ID</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>异步执行返回(block)</p>
+
+<ul>
+<li>error：error.code值为0表示执行成功；大于0表示执行失败；具体错误提示见 <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> 定义或error.localizedDescription</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland)  (group)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>设置默认家庭</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartFamilyManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getFamilyListWithCompletion:" title="getFamilyListWithCompletion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getFamilyListWithCompletion:">&ndash;&nbsp;getFamilyListWithCompletion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取家庭列表</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)getFamilyListWithCompletion:(void ( ^ ) ( NSError *error , NSArray *familyList ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>异步执行返回(block)</p>
+
+<ul>
+<li>error：error.code值为0表示执行成功；大于0表示执行失败；具体错误提示见 <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> 定义或error.localizedDescription</li>
+<li>familyList：家庭列表</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland)  (group)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>获取家庭列表</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartFamilyManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getFamilyMemberListWithFamilyID:completion:" title="getFamilyMemberListWithFamilyID:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getFamilyMemberListWithFamilyID:completion:">&ndash;&nbsp;getFamilyMemberListWithFamilyID:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取家庭成员列表</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)getFamilyMemberListWithFamilyID:(NSString *)<em>familyID</em> completion:(void ( ^ ) ( NSError *error , NSArray *memberList ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>familyID</code></th>
+						<td><p>家庭ID</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>异步执行返回(block)</p>
+
+<ul>
+<li>error：error.code值为0表示执行成功；大于0表示执行失败；具体错误提示见 <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> 定义或error.localizedDescription</li>
+<li>memberList：家庭成员列表</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland)  (group)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>获取家庭成员列表</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartFamilyManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/searchFamilyWithFamilyID:completion:" title="searchFamilyWithFamilyID:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/searchFamilyWithFamilyID:completion:">&ndash;&nbsp;searchFamilyWithFamilyID:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>通过FamilyId搜索家庭</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)searchFamilyWithFamilyID:(NSString *)<em>familyID</em> completion:(void ( ^ ) ( NSError *error , NSDictionary *dic ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>familyID</code></th>
+						<td><p>家庭ID</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>异步执行返回(block)</p>
+
+<ul>
+<li>error：error.code值为0表示执行成功；大于0表示执行失败；具体错误提示见 <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> 定义或error.localizedDescription</li>
+<li>dic：搜索到的家庭信息</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland)  (group)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>通过FamilyId搜索家庭</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartFamilyManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/searchFamilyWithFamilyNumber:completion:" title="searchFamilyWithFamilyNumber:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/searchFamilyWithFamilyNumber:completion:">&ndash;&nbsp;searchFamilyWithFamilyNumber:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>通过FamilyNumber搜索家庭</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)searchFamilyWithFamilyNumber:(NSString *)<em>familyNumber</em> completion:(void ( ^ ) ( NSError *error , NSDictionary *dic ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>familyNumber</code></th>
+						<td><p>家庭号</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>异步执行返回(block)</p>
+
+<ul>
+<li>error：error.code值为0表示执行成功；大于0表示执行失败；具体错误提示见 <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> 定义或error.localizedDescription</li>
+<li>dic：搜索到的家庭信息</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland)  (group)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>通过FamilyNumber搜索家庭</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartFamilyManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/searchFamilyWithFamilyName:completion:" title="searchFamilyWithFamilyName:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/searchFamilyWithFamilyName:completion:">&ndash;&nbsp;searchFamilyWithFamilyName:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>通过FamilyName搜索家庭</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)searchFamilyWithFamilyName:(NSString *)<em>familyName</em> completion:(void ( ^ ) ( NSError *error , NSArray *array ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>familyName</code></th>
+						<td><p>家庭名称</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>异步执行返回(block)</p>
+
+<ul>
+<li>error：error.code值为0表示执行成功；大于0表示执行失败；具体错误提示见 <a href="../Constants/MSmartErrorCode.html">MSmartErrorCode</a> 定义或error.localizedDescription</li>
+<li>array：搜索到的家庭列表</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland)  (group)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>通过FamilyName搜索家庭</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartFamilyManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getCurrentFamilyName" title="getCurrentFamilyName"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getCurrentFamilyName">&ndash;&nbsp;getCurrentFamilyName</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取当前家庭组的名称. 如果用户登陆成功, 接口返回是一个中文+英文的系统默认名称.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSString *)getCurrentFamilyName</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>家庭组名称</p>
+			</div>
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland)  (group)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>获取当前家庭组的名称. 如果用户登陆成功, 接口返回是一个中文+英文的系统默认名称.</p><div class="note"><p><strong>Note:</strong> 如果未登录则会返回 @&ldquo;尚未登录,请先登录&rdquo;</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartFamilyManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getCrurrentFamilyId" title="getCrurrentFamilyId"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getCrurrentFamilyId">&ndash;&nbsp;getCrurrentFamilyId</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取当前家庭ID</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSString *)getCrurrentFamilyId</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>家庭ID,如果未登录则会返回 @&ldquo;尚未登录,请先登录&rdquo;</p>
+			</div>
+			
+
+			
+			<div class="method-subsection availability">
+				<h4 class="method-subtitle parameter-title">Availability</h4>
+				<p>(mainland)  (group)</p>
+			</div>
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>获取当前家庭ID</p><div class="note"><p><strong>Note:</strong> 如果未登录则会返回 @&ldquo;尚未登录,请先登录&rdquo;</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MSmartFamilyManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2017 Midea Smart Technology Co., LTD. All rights reserved. Updated: 2017-09-18</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>
